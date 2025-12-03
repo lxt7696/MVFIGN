@@ -1,0 +1,1161 @@
+using device 0 NVIDIA GeForce RTX 3090
+DEVICE: cuda
+client_num: 1
+tensor(0.4251, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0214, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.3536, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0206, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.2987, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0218, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.2446, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0213, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.2051, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0207, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1733, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0193, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1469, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0180, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1265, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0171, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1131, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0171, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1058, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0167, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0989, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0159, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0910, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0148, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0897, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0143, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0869, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0131, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0871, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0122, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0855, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0118, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0888, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0115, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0863, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0111, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0879, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0105, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0854, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0098, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0883, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0097, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0799, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0086, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0796, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0084, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0795, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0082, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0790, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0079, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0747, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0069, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0721, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0073, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0696, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0062, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0698, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0065, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0684, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0060, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0673, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0058, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0641, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0056, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0665, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0054, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0658, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0051, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0605, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0049, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0627, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0047, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0597, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0046, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0606, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0044, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0611, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0044, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0589, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0044, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0609, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0042, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0608, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0043, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0566, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0041, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0585, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0039, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0577, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0040, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0555, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0038, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0574, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0038, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0571, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0038, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0559, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0038, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0551, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0037, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.4347, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0236, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.3686, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0249, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.3074, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0232, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.2531, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0224, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.2139, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0226, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1822, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0230, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1547, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0218, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1273, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0182, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1144, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0199, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1086, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0190, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0958, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0172, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0921, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0163, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0881, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0153, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0862, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0149, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0900, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0153, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0856, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0134, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0851, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0123, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0885, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0124, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0865, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0115, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0857, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0108, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0825, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0103, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0841, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0100, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0807, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0095, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0791, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0087, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0768, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0082, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0735, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0077, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0726, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0077, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0715, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0071, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0710, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0069, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0686, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0068, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0667, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0063, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0641, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0059, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0630, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0059, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0616, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0057, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0605, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0055, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0596, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0053, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0613, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0053, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0616, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0051, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0596, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0050, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0589, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0048, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0580, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0047, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0571, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0045, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0577, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0044, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0580, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0046, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0561, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0044, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0563, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0041, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0581, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0043, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0550, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0041, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0552, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0043, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0547, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0039, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.4253, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0260, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.3605, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0260, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.2982, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0245, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.2480, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0235, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.2114, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0225, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1760, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0219, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1496, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0215, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1278, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0198, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1132, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0190, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1026, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0183, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0988, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0180, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0888, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0164, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0870, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0165, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0872, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0154, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0881, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0147, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0851, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0135, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0885, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0137, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0868, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0122, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0866, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0118, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0871, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0110, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0831, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0101, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0834, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0100, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0776, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0089, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0774, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0086, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0775, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0084, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0734, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0079, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0730, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0079, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0694, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0071, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0694, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0071, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0672, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0068, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0663, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0061, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0670, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0062, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0632, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0057, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0610, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0056, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0607, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0057, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0626, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0053, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0603, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0050, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0624, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0052, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0596, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0049, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0623, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0049, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0593, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0048, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0579, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0046, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0568, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0046, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0572, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0046, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0581, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0043, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0572, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0044, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0549, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0042, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0571, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0044, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0560, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0043, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0521, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0042, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.4252, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0256, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.3551, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0252, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.2946, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0244, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.2454, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0237, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.2052, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0236, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1723, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0229, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1466, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0209, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1332, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0217, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1127, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0196, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1029, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0189, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0972, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0184, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0922, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0181, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0855, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0155, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0848, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0144, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0867, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0149, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0859, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0138, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0850, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0129, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0868, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0124, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0838, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0115, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0841, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0109, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0854, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0107, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0824, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0100, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0797, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0093, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0788, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0090, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0759, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0082, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0745, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0081, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0737, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0077, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0707, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0073, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0690, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0072, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0694, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0068, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0656, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0064, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0634, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0061, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0622, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0060, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0614, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0056, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0602, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0055, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0609, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0052, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0590, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0051, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0599, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0049, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0608, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0051, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0621, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0049, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0589, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0048, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0590, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0047, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0587, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0045, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0556, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0043, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0562, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0044, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0570, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0046, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0578, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0045, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0540, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0042, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0542, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0043, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0557, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0041, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.4430, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0267, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.3706, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0259, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.3133, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0274, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.2563, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0236, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.2138, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0230, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1807, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0233, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1554, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0227, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1334, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0212, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1163, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0202, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1074, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0194, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0947, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0189, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0886, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0174, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0914, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0175, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0892, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0160, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0849, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0148, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0849, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0139, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0841, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0137, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0868, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0133, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0869, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0121, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0871, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0119, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0865, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0109, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0830, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0103, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0836, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0101, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0810, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0094, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0805, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0089, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0762, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0086, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0729, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0080, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0727, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0079, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0709, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0075, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0718, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0075, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0658, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0066, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0669, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0063, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0654, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0063, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0657, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0061, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0599, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0056, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0634, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0055, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0607, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0054, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0584, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0053, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0599, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0052, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0601, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0050, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0588, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0048, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0595, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0048, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0584, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0048, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0598, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0049, device='cuda:0', grad_fn=<MeanBackward0>)
+using device 0 NVIDIA GeForce RTX 3090
+DEVICE: cuda
+client_num: 1
+========== 开始训练 ==========
+第一阶段：训练本地模型...
+tensor(0.4477, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0224, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.3713, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0207, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.3131, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0220, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.2577, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0197, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.2166, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0192, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1810, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0196, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1558, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0187, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1324, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0180, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1175, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0178, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1044, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0159, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1013, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0168, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0930, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0157, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0899, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0147, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0876, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0139, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0859, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0134, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0877, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0123, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0873, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0121, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0862, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0113, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0865, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0106, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0847, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0100, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0822, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0092, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0842, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0092, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0828, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0085, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0794, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0081, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0760, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0074, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0760, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0075, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0732, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0071, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0717, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0069, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0706, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0068, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0697, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0065, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0668, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0058, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0652, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0059, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0662, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0058, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0636, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0054, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0649, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0053, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0624, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0050, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0626, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0051, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0600, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0046, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0604, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0046, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0608, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0046, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0578, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0043, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0594, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0044, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0581, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0043, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0579, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0042, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0594, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0042, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0583, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0041, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0561, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0039, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0570, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0040, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0555, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0037, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0547, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0037, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.4248, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0234, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.3572, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0243, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.3032, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0255, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.2465, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0227, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.2095, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0229, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1750, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0214, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1522, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0202, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1304, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0193, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1164, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0189, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1036, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0172, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0970, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0162, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0926, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0162, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0898, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0157, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0904, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0146, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0850, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0136, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0856, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0130, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0874, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0124, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0845, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0115, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0865, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0115, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0866, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0113, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0846, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0099, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0805, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0093, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0822, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0091, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0811, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0088, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0778, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0082, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0729, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0077, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0733, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0071, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0719, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0068, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0699, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0065, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0688, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0064, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0656, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0062, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0671, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0060, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0645, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0058, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0653, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0056, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0618, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0053, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0635, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0053, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0609, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0048, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0614, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0049, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0591, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0045, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0586, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0046, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0592, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0046, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0600, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0044, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0582, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0043, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0596, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0043, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0549, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0041, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0563, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0041, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0571, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0043, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0579, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0042, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0571, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0040, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0544, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0040, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.4185, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0261, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.3546, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0256, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.2904, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0237, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.2418, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0232, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.2061, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0235, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1763, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0231, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1483, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0217, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1302, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0208, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1144, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0199, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1041, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0184, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0972, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0174, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0894, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0163, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0877, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0160, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0849, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0154, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0855, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0140, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0865, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0139, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0849, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0125, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0879, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0133, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0822, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0106, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0820, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0103, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0868, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0112, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0854, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0098, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0783, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0089, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0767, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0087, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0760, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0080, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0740, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0075, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0749, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0078, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0714, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0074, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0659, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0065, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0659, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0064, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0662, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0062, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0652, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0061, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0657, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0059, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0629, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0055, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0610, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0053, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0616, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0053, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0643, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0052, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0610, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0050, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0601, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0048, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0591, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0048, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0589, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0046, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0593, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0047, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0557, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0043, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0585, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0043, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0566, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0043, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0549, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0043, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0556, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0042, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0558, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0042, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0541, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0041, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0556, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0041, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.4315, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0266, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.3564, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0248, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.3014, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0263, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.2452, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0231, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.2097, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0240, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1745, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0224, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1437, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0212, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1255, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0209, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1106, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0194, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1030, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0195, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0936, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0175, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0907, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0166, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0897, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0172, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0883, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0163, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0870, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0152, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0837, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0144, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0883, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0143, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0850, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0122, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0859, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0120, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0854, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0113, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0866, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0114, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0820, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0106, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0810, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0098, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0781, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0091, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0780, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0091, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0755, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0085, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0721, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0077, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0732, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0079, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0691, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0071, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0668, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0071, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0665, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0066, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0671, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0063, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0648, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0064, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0626, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0060, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0614, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0058, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0625, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0057, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0593, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0052, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0599, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0052, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0590, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0050, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0597, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0051, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0573, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0048, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0576, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0048, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0583, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0048, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0581, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0046, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0573, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0047, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0562, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0045, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0559, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0045, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0545, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0044, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0555, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0044, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0551, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0043, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.4333, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0269, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.3587, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0262, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.2993, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0255, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.2484, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0236, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.2073, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0237, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1754, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0225, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1500, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0225, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1298, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0212, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1131, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0198, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1022, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0197, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0921, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0180, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0945, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0185, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0883, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0172, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0854, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0154, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0856, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0152, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0899, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0148, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0899, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0142, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0870, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0131, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0851, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0121, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0867, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0116, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0844, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0109, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0837, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0100, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0802, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0093, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0771, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0092, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0769, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0086, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0716, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0080, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0726, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0081, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0736, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0079, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0701, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0072, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0695, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0070, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0660, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0064, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0639, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0065, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0638, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0063, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0669, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0062, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0653, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0058, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0626, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0057, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0641, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0055, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0624, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0053, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0593, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0049, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0590, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0051, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0616, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0049, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0627, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0050, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0581, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0047, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0568, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0045, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0575, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0045, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0568, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0045, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0562, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0043, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0572, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0044, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0527, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0043, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0544, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0042, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.4277, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0269, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.3615, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0279, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.2996, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0262, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.2452, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0235, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.2111, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0257, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1792, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0244, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1461, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0213, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1260, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0214, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1139, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0205, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1013, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0189, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0932, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0185, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0887, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0176, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0890, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0173, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0867, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0160, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0856, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0153, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0868, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0153, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0882, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0141, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0847, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0130, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0889, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0129, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0833, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0114, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0866, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0113, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0812, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0106, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0831, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0101, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0792, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0093, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0763, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0089, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0761, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0086, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0750, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0083, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0676, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0071, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0731, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0077, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0709, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0070, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0660, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0069, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0646, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0063, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0630, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0064, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0630, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0059, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0643, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0059, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0638, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0056, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0583, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0054, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0606, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0053, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0607, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0052, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0575, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0050, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0571, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0049, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0562, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0048, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0571, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0048, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0574, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0047, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0594, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0048, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0557, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0045, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0547, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0044, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0544, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0045, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0550, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0045, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0593, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0046, device='cuda:0', grad_fn=<MeanBackward0>)
+第一阶段训练完成，用时: 5217.35秒
+第二阶段：训练全局模型...
+  0%|          | 0/300 [00:00<?, ?it/s]tensor(0.1560, dtype=torch.float64) 0.04210380622837371
+tensor(0.1440, dtype=torch.float64) 0.036251748251748254
+tensor(0.1000, dtype=torch.float64) 0.0613960441199673
+tensor(0.1390, dtype=torch.float64) 0.09766593236714977
+tensor(0.2000, dtype=torch.float64) 0.15396368458734705
+tensor(0.2100, dtype=torch.float64) 0.15928577045628098
+tensor(0.2740, dtype=torch.float64) 0.15211415282447321
+tensor(0.2530, dtype=torch.float64) 0.13502988345906772
+tensor(0.2500, dtype=torch.float64) 0.15334692513811243
+tensor(0.2290, dtype=torch.float64) 0.1340308169676547
+tensor(0.3460, dtype=torch.float64) 0.27664107799345267
+tensor(0.3370, dtype=torch.float64) 0.2753036960784331
+tensor(0.6140, dtype=torch.float64) 0.5838528003012647
+tensor(0.5950, dtype=torch.float64) 0.5685431752021498
+tensor(0.5580, dtype=torch.float64) 0.5192626416565059
+tensor(0.5780, dtype=torch.float64) 0.5462990474988428
+  3%|▎         | 8/300 [00:00<00:03, 73.16it/s]tensor(0.5740, dtype=torch.float64) 0.5446996895830686
+tensor(0.5620, dtype=torch.float64) 0.5293358916315823
+tensor(0.4600, dtype=torch.float64) 0.45807274174292817
+tensor(0.4660, dtype=torch.float64) 0.4569617640764381
+tensor(0.4720, dtype=torch.float64) 0.4791577762544277
+tensor(0.4660, dtype=torch.float64) 0.4685023038968229
+tensor(0.5340, dtype=torch.float64) 0.5454184577996853
+tensor(0.5520, dtype=torch.float64) 0.5665009091347492
+tensor(0.6380, dtype=torch.float64) 0.6473448998749438
+tensor(0.6420, dtype=torch.float64) 0.6532320245552418
+tensor(0.6140, dtype=torch.float64) 0.618619416555744
+tensor(0.6610, dtype=torch.float64) 0.6678778351556677
+tensor(0.5720, dtype=torch.float64) 0.5731697136958562
+tensor(0.6320, dtype=torch.float64) 0.6365953711966663
+tensor(0.5360, dtype=torch.float64) 0.5363536643439459
+tensor(0.5790, dtype=torch.float64) 0.5837449905390596
+  5%|▌         | 16/300 [00:00<00:04, 67.14it/s]tensor(0.5400, dtype=torch.float64) 0.538312161838787
+tensor(0.5890, dtype=torch.float64) 0.593435985158831
+tensor(0.5640, dtype=torch.float64) 0.5593239976574113
+tensor(0.6180, dtype=torch.float64) 0.6217620741196513
+tensor(0.6160, dtype=torch.float64) 0.6134652474034886
+tensor(0.6530, dtype=torch.float64) 0.6555562947680577
+tensor(0.6600, dtype=torch.float64) 0.6590521192420875
+tensor(0.6830, dtype=torch.float64) 0.6845392656825956
+tensor(0.6920, dtype=torch.float64) 0.6924263971081943
+tensor(0.6950, dtype=torch.float64) 0.6973778787335206
+tensor(0.6980, dtype=torch.float64) 0.7003700354140174
+tensor(0.6840, dtype=torch.float64) 0.6889201572579357
+tensor(0.6860, dtype=torch.float64) 0.6899189371734579
+tensor(0.6780, dtype=torch.float64) 0.6836751029274102
+  8%|▊         | 23/300 [00:00<00:04, 65.61it/s]tensor(0.6680, dtype=torch.float64) 0.6739397524243871
+tensor(0.6760, dtype=torch.float64) 0.68244002915379
+tensor(0.6580, dtype=torch.float64) 0.6656962214031138
+tensor(0.6600, dtype=torch.float64) 0.6670328318503725
+tensor(0.6400, dtype=torch.float64) 0.6505602941050022
+tensor(0.6530, dtype=torch.float64) 0.6606284234058097
+tensor(0.6240, dtype=torch.float64) 0.6360287842101402
+tensor(0.6540, dtype=torch.float64) 0.6628591877639635
+tensor(0.6280, dtype=torch.float64) 0.64122991450126
+tensor(0.6560, dtype=torch.float64) 0.6657705512178237
+tensor(0.6480, dtype=torch.float64) 0.6604703319629233
+tensor(0.6620, dtype=torch.float64) 0.6710807543473631
+tensor(0.6560, dtype=torch.float64) 0.6662586652849644
+tensor(0.6740, dtype=torch.float64) 0.6808811313958442
+ 10%|█         | 30/300 [00:00<00:04, 64.29it/s]tensor(0.6700, dtype=torch.float64) 0.6760767254988789
+tensor(0.6800, dtype=torch.float64) 0.685925623383593
+tensor(0.6700, dtype=torch.float64) 0.6735106394062972
+tensor(0.6900, dtype=torch.float64) 0.6942120994637841
+tensor(0.6680, dtype=torch.float64) 0.6711780340173653
+tensor(0.6910, dtype=torch.float64) 0.6942442951514987
+tensor(0.6820, dtype=torch.float64) 0.6829017228749673
+tensor(0.6900, dtype=torch.float64) 0.6919646348782602
+tensor(0.6780, dtype=torch.float64) 0.6784483908134822
+tensor(0.6890, dtype=torch.float64) 0.6899536041491626
+tensor(0.6660, dtype=torch.float64) 0.6663027972178304
+tensor(0.6950, dtype=torch.float64) 0.6956470593122045
+tensor(0.6680, dtype=torch.float64) 0.6678733405234454
+tensor(0.6910, dtype=torch.float64) 0.6912465295035808
+ 12%|█▏        | 37/300 [00:00<00:04, 64.06it/s]tensor(0.6700, dtype=torch.float64) 0.6693244776959074
+tensor(0.6870, dtype=torch.float64) 0.6878363573639258
+tensor(0.6640, dtype=torch.float64) 0.6626088384922948
+tensor(0.6830, dtype=torch.float64) 0.6835464048279221
+tensor(0.6580, dtype=torch.float64) 0.656422308036405
+tensor(0.6790, dtype=torch.float64) 0.6798062252179659
+tensor(0.6580, dtype=torch.float64) 0.6572207369067328
+tensor(0.6810, dtype=torch.float64) 0.6817784267530275
+tensor(0.6560, dtype=torch.float64) 0.6551507407486131
+tensor(0.6820, dtype=torch.float64) 0.6831877827982515
+tensor(0.6560, dtype=torch.float64) 0.6550642062304997
+tensor(0.6810, dtype=torch.float64) 0.6826157791301304
+tensor(0.6600, dtype=torch.float64) 0.6591988756072376
+tensor(0.6810, dtype=torch.float64) 0.6825166292854657
+ 15%|█▍        | 44/300 [00:00<00:04, 63.94it/s]tensor(0.6600, dtype=torch.float64) 0.6591988756072376
+tensor(0.6800, dtype=torch.float64) 0.6815785699262444
+tensor(0.6560, dtype=torch.float64) 0.6553749838345183
+tensor(0.6810, dtype=torch.float64) 0.6825741963977033
+tensor(0.6540, dtype=torch.float64) 0.6532755866567442
+tensor(0.6810, dtype=torch.float64) 0.6825637075495014
+tensor(0.6540, dtype=torch.float64) 0.6532755866567442
+tensor(0.6820, dtype=torch.float64) 0.683845681220096
+tensor(0.6540, dtype=torch.float64) 0.6532755866567442
+tensor(0.6850, dtype=torch.float64) 0.6867916247285261
+tensor(0.6540, dtype=torch.float64) 0.6532873925929877
+tensor(0.6830, dtype=torch.float64) 0.6846879255011388
+tensor(0.6520, dtype=torch.float64) 0.6512620742209576
+tensor(0.6820, dtype=torch.float64) 0.6836574579832344
+ 17%|█▋        | 51/300 [00:00<00:04, 52.89it/s]tensor(0.6560, dtype=torch.float64) 0.6549054779864891
+tensor(0.6830, dtype=torch.float64) 0.6848894200391852
+tensor(0.6540, dtype=torch.float64) 0.6520292136435692
+tensor(0.6790, dtype=torch.float64) 0.6809825237750734
+tensor(0.6520, dtype=torch.float64) 0.6507314619736615
+tensor(0.6780, dtype=torch.float64) 0.6798207963664779
+tensor(0.6500, dtype=torch.float64) 0.648525981608258
+tensor(0.6740, dtype=torch.float64) 0.676063544772391
+tensor(0.6500, dtype=torch.float64) 0.6490320803688325
+tensor(0.6770, dtype=torch.float64) 0.6789517596631505
+tensor(0.6520, dtype=torch.float64) 0.6507547366212051
+tensor(0.6770, dtype=torch.float64) 0.6793154459297724
+tensor(0.6520, dtype=torch.float64) 0.6507299049413349
+tensor(0.6760, dtype=torch.float64) 0.6783583785452324
+ 19%|█▉        | 58/300 [00:00<00:04, 56.36it/s]tensor(0.6520, dtype=torch.float64) 0.6517554148802932
+tensor(0.6780, dtype=torch.float64) 0.6803172637145369
+tensor(0.6560, dtype=torch.float64) 0.6558618305684598
+tensor(0.6800, dtype=torch.float64) 0.6822846762326293
+tensor(0.6580, dtype=torch.float64) 0.6579120139257721
+tensor(0.6800, dtype=torch.float64) 0.6824936547317895
+tensor(0.6560, dtype=torch.float64) 0.6558192409481469
+tensor(0.6790, dtype=torch.float64) 0.6812403106111945
+tensor(0.6560, dtype=torch.float64) 0.6560755327388367
+tensor(0.6830, dtype=torch.float64) 0.6855192598204113
+tensor(0.6600, dtype=torch.float64) 0.6604709958770553
+tensor(0.6850, dtype=torch.float64) 0.6880347672043599
+tensor(0.6560, dtype=torch.float64) 0.6568127051955351
+tensor(0.6860, dtype=torch.float64) 0.6891129570094673
+ 22%|██▏       | 65/300 [00:01<00:04, 58.46it/s]tensor(0.6600, dtype=torch.float64) 0.6615452813510522
+tensor(0.6870, dtype=torch.float64) 0.6903850205156057
+tensor(0.6600, dtype=torch.float64) 0.6616718865873286
+tensor(0.6860, dtype=torch.float64) 0.6893281333319315
+tensor(0.6600, dtype=torch.float64) 0.6616718865873286
+tensor(0.6860, dtype=torch.float64) 0.689775220715526
+tensor(0.6640, dtype=torch.float64) 0.6656294636309308
+tensor(0.6850, dtype=torch.float64) 0.6889703243455124
+tensor(0.6640, dtype=torch.float64) 0.6656294636309308
+tensor(0.6840, dtype=torch.float64) 0.6878861919953931
+tensor(0.6620, dtype=torch.float64) 0.6636695032868261
+tensor(0.6880, dtype=torch.float64) 0.6916486643406672
+tensor(0.6620, dtype=torch.float64) 0.6636695032868261
+tensor(0.6870, dtype=torch.float64) 0.690893420054418
+ 24%|██▍       | 72/300 [00:01<00:03, 60.06it/s]tensor(0.6620, dtype=torch.float64) 0.6636695032868261
+tensor(0.6880, dtype=torch.float64) 0.6919380338430733
+tensor(0.6600, dtype=torch.float64) 0.6617694274460431
+tensor(0.6900, dtype=torch.float64) 0.693821864011906
+tensor(0.6620, dtype=torch.float64) 0.6638736070678314
+tensor(0.6880, dtype=torch.float64) 0.6918491802917265
+tensor(0.6620, dtype=torch.float64) 0.6641729972467963
+tensor(0.6890, dtype=torch.float64) 0.6928406667834831
+tensor(0.6640, dtype=torch.float64) 0.6660172943736518
+tensor(0.6890, dtype=torch.float64) 0.6927658674726702
+tensor(0.6640, dtype=torch.float64) 0.6660134621138162
+tensor(0.6840, dtype=torch.float64) 0.6877634198108485
+tensor(0.6640, dtype=torch.float64) 0.6661030872886596
+tensor(0.6830, dtype=torch.float64) 0.6868844434387971
+ 26%|██▋       | 79/300 [00:01<00:03, 61.59it/s]tensor(0.6640, dtype=torch.float64) 0.6662556833837734
+tensor(0.6810, dtype=torch.float64) 0.6851884336318175
+tensor(0.6680, dtype=torch.float64) 0.6701034627751378
+tensor(0.6790, dtype=torch.float64) 0.6835019852801691
+tensor(0.6640, dtype=torch.float64) 0.6661767352507737
+tensor(0.6800, dtype=torch.float64) 0.68441460284079
+tensor(0.6640, dtype=torch.float64) 0.6664335135601837
+tensor(0.6830, dtype=torch.float64) 0.6872262933266954
+tensor(0.6620, dtype=torch.float64) 0.6645783934169279
+tensor(0.6830, dtype=torch.float64) 0.6871554963672563
+tensor(0.6640, dtype=torch.float64) 0.6660201682375596
+tensor(0.6810, dtype=torch.float64) 0.6849746122486358
+tensor(0.6580, dtype=torch.float64) 0.6602792622796352
+tensor(0.6790, dtype=torch.float64) 0.6828679907709307
+ 29%|██▊       | 86/300 [00:01<00:03, 62.67it/s]tensor(0.6580, dtype=torch.float64) 0.6602487033648657
+tensor(0.6810, dtype=torch.float64) 0.6847666277268365
+tensor(0.6580, dtype=torch.float64) 0.6602487033648657
+tensor(0.6820, dtype=torch.float64) 0.6857986021700229
+tensor(0.6600, dtype=torch.float64) 0.6619297711134193
+tensor(0.6810, dtype=torch.float64) 0.684668537019296
+tensor(0.6580, dtype=torch.float64) 0.6599991137097572
+tensor(0.6800, dtype=torch.float64) 0.6836949092767025
+tensor(0.6600, dtype=torch.float64) 0.662150316824972
+tensor(0.6800, dtype=torch.float64) 0.6836104736856372
+tensor(0.6600, dtype=torch.float64) 0.662150316824972
+tensor(0.6820, dtype=torch.float64) 0.685646607672336
+tensor(0.6580, dtype=torch.float64) 0.6601998260057864
+tensor(0.6800, dtype=torch.float64) 0.683720740991875
+ 31%|███       | 93/300 [00:01<00:03, 63.79it/s]tensor(0.6600, dtype=torch.float64) 0.6618482422632253
+tensor(0.6810, dtype=torch.float64) 0.6848515972593155
+tensor(0.6580, dtype=torch.float64) 0.6601623169209618
+tensor(0.6800, dtype=torch.float64) 0.6839480463247377
+tensor(0.6620, dtype=torch.float64) 0.6640517973429223
+tensor(0.6780, dtype=torch.float64) 0.682026724286306
+tensor(0.6620, dtype=torch.float64) 0.6640517973429223
+tensor(0.6790, dtype=torch.float64) 0.6829338893772942
+tensor(0.6640, dtype=torch.float64) 0.6663877978772034
+tensor(0.6790, dtype=torch.float64) 0.6829357954854288
+tensor(0.6620, dtype=torch.float64) 0.664359956370146
+tensor(0.6790, dtype=torch.float64) 0.682895659855526
+tensor(0.6620, dtype=torch.float64) 0.664359956370146
+tensor(0.6790, dtype=torch.float64) 0.682895659855526
+tensor(0.6600, dtype=torch.float64) 0.6625086579012652
+tensor(0.6790, dtype=torch.float64) 0.682895659855526
+ 34%|███▎      | 101/300 [00:01<00:02, 66.56it/s]tensor(0.6600, dtype=torch.float64) 0.6625086579012652
+tensor(0.6800, dtype=torch.float64) 0.6839146359533043
+tensor(0.6620, dtype=torch.float64) 0.6643166579012653
+tensor(0.6830, dtype=torch.float64) 0.6868665786452566
+tensor(0.6640, dtype=torch.float64) 0.6663453584947076
+tensor(0.6830, dtype=torch.float64) 0.686880622883032
+tensor(0.6640, dtype=torch.float64) 0.6663453584947076
+tensor(0.6830, dtype=torch.float64) 0.686880622883032
+tensor(0.6620, dtype=torch.float64) 0.6639969435959987
+tensor(0.6830, dtype=torch.float64) 0.6871066567222172
+tensor(0.6600, dtype=torch.float64) 0.661572022584254
+tensor(0.6830, dtype=torch.float64) 0.6869821346045064
+tensor(0.6600, dtype=torch.float64) 0.661572022584254
+tensor(0.6850, dtype=torch.float64) 0.6888203456588824
+tensor(0.6620, dtype=torch.float64) 0.663836517302429
+tensor(0.6850, dtype=torch.float64) 0.6886832229267058
+ 36%|███▋      | 109/300 [00:01<00:02, 68.68it/s]tensor(0.6620, dtype=torch.float64) 0.663836517302429
+tensor(0.6850, dtype=torch.float64) 0.68857879622149
+tensor(0.6660, dtype=torch.float64) 0.6676405882432973
+tensor(0.6860, dtype=torch.float64) 0.6895527594776917
+tensor(0.6640, dtype=torch.float64) 0.6654937338860112
+tensor(0.6830, dtype=torch.float64) 0.6867166173308201
+tensor(0.6640, dtype=torch.float64) 0.6652790458264285
+tensor(0.6850, dtype=torch.float64) 0.6886913353757501
+tensor(0.6640, dtype=torch.float64) 0.6652790458264285
+tensor(0.6850, dtype=torch.float64) 0.6886533757197306
+tensor(0.6660, dtype=torch.float64) 0.6672342037208042
+tensor(0.6880, dtype=torch.float64) 0.691171137299712
+tensor(0.6680, dtype=torch.float64) 0.6690675017255826
+tensor(0.6900, dtype=torch.float64) 0.6930161855518172
+tensor(0.6720, dtype=torch.float64) 0.6729682200192814
+tensor(0.6910, dtype=torch.float64) 0.6937613431311097
+tensor(0.6680, dtype=torch.float64) 0.6689712057106492
+tensor(0.6900, dtype=torch.float64) 0.692696983850985
+ 39%|███▉      | 118/300 [00:01<00:02, 73.33it/s]tensor(0.6680, dtype=torch.float64) 0.6691281640745642
+tensor(0.6920, dtype=torch.float64) 0.6946374401396174
+tensor(0.6700, dtype=torch.float64) 0.6709000498166899
+tensor(0.6930, dtype=torch.float64) 0.6955662463531966
+tensor(0.6740, dtype=torch.float64) 0.6746759371903139
+tensor(0.6930, dtype=torch.float64) 0.6952623266148117
+tensor(0.6740, dtype=torch.float64) 0.6746759371903139
+tensor(0.6900, dtype=torch.float64) 0.6920637102969961
+tensor(0.6740, dtype=torch.float64) 0.6746759371903139
+tensor(0.6900, dtype=torch.float64) 0.6920637102969961
+tensor(0.6760, dtype=torch.float64) 0.6765363301957052
+tensor(0.6910, dtype=torch.float64) 0.6929147596888064
+tensor(0.6740, dtype=torch.float64) 0.674610786389666
+tensor(0.6900, dtype=torch.float64) 0.6918428254418116
+tensor(0.6740, dtype=torch.float64) 0.674610786389666
+tensor(0.6910, dtype=torch.float64) 0.6928695270334218
+tensor(0.6740, dtype=torch.float64) 0.674362530434726
+tensor(0.6930, dtype=torch.float64) 0.6946804887551629
+ 42%|████▏     | 127/300 [00:01<00:02, 76.69it/s]tensor(0.6740, dtype=torch.float64) 0.6740274369112834
+tensor(0.6960, dtype=torch.float64) 0.6977929390555807
+tensor(0.6760, dtype=torch.float64) 0.675831505075496
+tensor(0.6940, dtype=torch.float64) 0.6958867335520295
+tensor(0.6800, dtype=torch.float64) 0.6800765339008817
+tensor(0.6940, dtype=torch.float64) 0.6960699574852007
+tensor(0.6800, dtype=torch.float64) 0.6798537974928707
+tensor(0.6950, dtype=torch.float64) 0.6972500474053359
+tensor(0.6800, dtype=torch.float64) 0.6800932882696422
+tensor(0.6950, dtype=torch.float64) 0.6972500474053359
+tensor(0.6800, dtype=torch.float64) 0.6800932882696422
+tensor(0.6940, dtype=torch.float64) 0.6965123603878178
+tensor(0.6820, dtype=torch.float64) 0.6819094498858039
+tensor(0.6950, dtype=torch.float64) 0.697515319318638
+tensor(0.6820, dtype=torch.float64) 0.682283708960276
+tensor(0.6980, dtype=torch.float64) 0.7006826209242055
+tensor(0.6800, dtype=torch.float64) 0.6805168654290344
+tensor(0.6980, dtype=torch.float64) 0.7008355374547849
+ 45%|████▌     | 136/300 [00:02<00:02, 79.11it/s]tensor(0.6780, dtype=torch.float64) 0.6786682921052242
+tensor(0.6940, dtype=torch.float64) 0.6970941047254418
+tensor(0.6780, dtype=torch.float64) 0.6786682921052242
+tensor(0.6900, dtype=torch.float64) 0.6930532957309816
+tensor(0.6780, dtype=torch.float64) 0.6786682921052242
+tensor(0.6910, dtype=torch.float64) 0.6942172631107115
+tensor(0.6800, dtype=torch.float64) 0.6805064622570048
+tensor(0.6910, dtype=torch.float64) 0.6942989683003257
+tensor(0.6820, dtype=torch.float64) 0.6827272727272726
+tensor(0.6900, dtype=torch.float64) 0.6934824579725968
+tensor(0.6840, dtype=torch.float64) 0.6851359798814135
+tensor(0.6910, dtype=torch.float64) 0.6944809816984702
+tensor(0.6860, dtype=torch.float64) 0.6872652398900773
+tensor(0.6920, dtype=torch.float64) 0.6954139713756797
+tensor(0.6860, dtype=torch.float64) 0.6872652398900773
+tensor(0.6940, dtype=torch.float64) 0.6976008393922462
+tensor(0.6840, dtype=torch.float64) 0.6852577605728423
+tensor(0.6950, dtype=torch.float64) 0.6986455265015168
+ 48%|████▊     | 145/300 [00:02<00:01, 81.04it/s]tensor(0.6820, dtype=torch.float64) 0.6829271784243562
+tensor(0.6880, dtype=torch.float64) 0.6917507174003833
+tensor(0.6780, dtype=torch.float64) 0.6788389191958641
+tensor(0.6890, dtype=torch.float64) 0.6928021087330225
+tensor(0.6800, dtype=torch.float64) 0.680697308104253
+tensor(0.6890, dtype=torch.float64) 0.6928656831838251
+tensor(0.6780, dtype=torch.float64) 0.6790827995422076
+tensor(0.6880, dtype=torch.float64) 0.6919042063197149
+tensor(0.6800, dtype=torch.float64) 0.6810587661501948
+tensor(0.6840, dtype=torch.float64) 0.6879574656855818
+tensor(0.6760, dtype=torch.float64) 0.6765192922907208
+tensor(0.6840, dtype=torch.float64) 0.6879833151793671
+tensor(0.6740, dtype=torch.float64) 0.674565632791463
+tensor(0.6830, dtype=torch.float64) 0.6868559327164396
+tensor(0.6780, dtype=torch.float64) 0.6782185859203517
+tensor(0.6850, dtype=torch.float64) 0.6887239597687593
+tensor(0.6760, dtype=torch.float64) 0.6763101267048482
+tensor(0.6850, dtype=torch.float64) 0.6885596267609664
+ 51%|█████▏    | 154/300 [00:02<00:01, 82.61it/s]tensor(0.6800, dtype=torch.float64) 0.6802238658922136
+tensor(0.6840, dtype=torch.float64) 0.6874835575372703
+tensor(0.6800, dtype=torch.float64) 0.6802238658922136
+tensor(0.6880, dtype=torch.float64) 0.6910807279055914
+tensor(0.6800, dtype=torch.float64) 0.680099836976653
+tensor(0.6890, dtype=torch.float64) 0.6919077903259785
+tensor(0.6780, dtype=torch.float64) 0.6775973691662949
+tensor(0.6900, dtype=torch.float64) 0.6927522812150878
+tensor(0.6780, dtype=torch.float64) 0.6773456585741421
+tensor(0.6890, dtype=torch.float64) 0.6918100226391788
+tensor(0.6740, dtype=torch.float64) 0.6733214861158429
+tensor(0.6880, dtype=torch.float64) 0.6908340152575217
+tensor(0.6740, dtype=torch.float64) 0.6733214861158429
+tensor(0.6910, dtype=torch.float64) 0.693549727553023
+tensor(0.6760, dtype=torch.float64) 0.6753827494170123
+tensor(0.6890, dtype=torch.float64) 0.6918100226391788
+tensor(0.6760, dtype=torch.float64) 0.6754860937047829
+tensor(0.6880, dtype=torch.float64) 0.6911777543690695
+ 54%|█████▍    | 163/300 [00:02<00:01, 83.70it/s]tensor(0.6780, dtype=torch.float64) 0.6780075427651585
+tensor(0.6870, dtype=torch.float64) 0.6903725180505416
+tensor(0.6780, dtype=torch.float64) 0.6781384551111501
+tensor(0.6870, dtype=torch.float64) 0.6906460213798292
+tensor(0.6800, dtype=torch.float64) 0.6803769075498374
+tensor(0.6870, dtype=torch.float64) 0.6906460213798292
+tensor(0.6800, dtype=torch.float64) 0.6805083669760175
+tensor(0.6860, dtype=torch.float64) 0.6896377251465554
+tensor(0.6800, dtype=torch.float64) 0.6806879375551467
+tensor(0.6860, dtype=torch.float64) 0.6898895457632055
+tensor(0.6800, dtype=torch.float64) 0.6806879375551467
+tensor(0.6870, dtype=torch.float64) 0.6909941556785136
+tensor(0.6780, dtype=torch.float64) 0.678716478863475
+tensor(0.6900, dtype=torch.float64) 0.6937857419980888
+tensor(0.6780, dtype=torch.float64) 0.678838718324238
+tensor(0.6890, dtype=torch.float64) 0.6927408676625668
+tensor(0.6780, dtype=torch.float64) 0.678838718324238
+tensor(0.6900, dtype=torch.float64) 0.6935647187669632
+ 57%|█████▋    | 172/300 [00:02<00:01, 84.51it/s]tensor(0.6780, dtype=torch.float64) 0.678838718324238
+tensor(0.6910, dtype=torch.float64) 0.6943730162636257
+tensor(0.6780, dtype=torch.float64) 0.6787033442985269
+tensor(0.6940, dtype=torch.float64) 0.6972395852903832
+tensor(0.6780, dtype=torch.float64) 0.6787033442985269
+tensor(0.6940, dtype=torch.float64) 0.6971476150876885
+tensor(0.6780, dtype=torch.float64) 0.6787033442985269
+tensor(0.6950, dtype=torch.float64) 0.6981524515265124
+tensor(0.6740, dtype=torch.float64) 0.6740876420789743
+tensor(0.6950, dtype=torch.float64) 0.698094269288664
+tensor(0.6740, dtype=torch.float64) 0.6740876420789743
+tensor(0.6950, dtype=torch.float64) 0.6982052773741539
+tensor(0.6740, dtype=torch.float64) 0.6740876420789743
+tensor(0.6940, dtype=torch.float64) 0.6970377916494094
+tensor(0.6740, dtype=torch.float64) 0.6740876420789743
+tensor(0.6940, dtype=torch.float64) 0.6971198038576748
+tensor(0.6780, dtype=torch.float64) 0.6775290221009788
+tensor(0.6970, dtype=torch.float64) 0.6995795720735243
+ 60%|██████    | 181/300 [00:02<00:01, 84.74it/s]tensor(0.6780, dtype=torch.float64) 0.6772370436047711
+tensor(0.6990, dtype=torch.float64) 0.7013831952938543
+tensor(0.6800, dtype=torch.float64) 0.6792539704741247
+tensor(0.7000, dtype=torch.float64) 0.7022919452374013
+tensor(0.6820, dtype=torch.float64) 0.6809908132728427
+tensor(0.7010, dtype=torch.float64) 0.7034586204695024
+tensor(0.6760, dtype=torch.float64) 0.6752600351388038
+tensor(0.7010, dtype=torch.float64) 0.7032835388488881
+tensor(0.6760, dtype=torch.float64) 0.6752600351388038
+tensor(0.7010, dtype=torch.float64) 0.7032445160312032
+tensor(0.6740, dtype=torch.float64) 0.6732513995087276
+tensor(0.7030, dtype=torch.float64) 0.7052916312212454
+tensor(0.6700, dtype=torch.float64) 0.6696086649132189
+tensor(0.7030, dtype=torch.float64) 0.7052263690429897
+tensor(0.6720, dtype=torch.float64) 0.6715819339209184
+tensor(0.7010, dtype=torch.float64) 0.7032535928617398
+tensor(0.6720, dtype=torch.float64) 0.67111645986899
+tensor(0.6990, dtype=torch.float64) 0.7011379549080964
+ 63%|██████▎   | 190/300 [00:02<00:01, 85.20it/s]tensor(0.6720, dtype=torch.float64) 0.6707267773285809
+tensor(0.6960, dtype=torch.float64) 0.6979687078340688
+tensor(0.6700, dtype=torch.float64) 0.6687428513818998
+tensor(0.6960, dtype=torch.float64) 0.6980532348801719
+tensor(0.6680, dtype=torch.float64) 0.6661611460426997
+tensor(0.6940, dtype=torch.float64) 0.6961876494054731
+tensor(0.6700, dtype=torch.float64) 0.6684545363521003
+tensor(0.6940, dtype=torch.float64) 0.6958581953273247
+tensor(0.6720, dtype=torch.float64) 0.6703327814900468
+tensor(0.6930, dtype=torch.float64) 0.6946959617844863
+tensor(0.6700, dtype=torch.float64) 0.6685638350915831
+tensor(0.6930, dtype=torch.float64) 0.6945881699963042
+tensor(0.6680, dtype=torch.float64) 0.6672269437898253
+tensor(0.6930, dtype=torch.float64) 0.694714585361576
+tensor(0.6680, dtype=torch.float64) 0.6676928247305894
+tensor(0.6970, dtype=torch.float64) 0.6991361953957359
+tensor(0.6700, dtype=torch.float64) 0.6696971816924181
+tensor(0.6970, dtype=torch.float64) 0.6991771970748593
+ 66%|██████▋   | 199/300 [00:02<00:01, 85.55it/s]tensor(0.6740, dtype=torch.float64) 0.6734657622957334
+tensor(0.6930, dtype=torch.float64) 0.6956918892180578
+tensor(0.6720, dtype=torch.float64) 0.6716827825993867
+tensor(0.6930, dtype=torch.float64) 0.6955976628560396
+tensor(0.6720, dtype=torch.float64) 0.6719426142991577
+tensor(0.6950, dtype=torch.float64) 0.6979083830735631
+tensor(0.6700, dtype=torch.float64) 0.6706172147889131
+tensor(0.6970, dtype=torch.float64) 0.7000697442542817
+tensor(0.6780, dtype=torch.float64) 0.6789113272051808
+tensor(0.6980, dtype=torch.float64) 0.7012054051359344
+tensor(0.6800, dtype=torch.float64) 0.6808092038358816
+tensor(0.7030, dtype=torch.float64) 0.7061794469245563
+tensor(0.6780, dtype=torch.float64) 0.6792399317624103
+tensor(0.7010, dtype=torch.float64) 0.7042311929688335
+tensor(0.6760, dtype=torch.float64) 0.6772877442295078
+tensor(0.7010, dtype=torch.float64) 0.7041727913394521
+tensor(0.6800, dtype=torch.float64) 0.6815052893622013
+tensor(0.7030, dtype=torch.float64) 0.7061784668581652
+ 69%|██████▉   | 208/300 [00:02<00:01, 85.82it/s]tensor(0.6840, dtype=torch.float64) 0.685077250114267
+tensor(0.7070, dtype=torch.float64) 0.709830171305433
+tensor(0.6820, dtype=torch.float64) 0.6832887166966451
+tensor(0.7020, dtype=torch.float64) 0.7044510753598827
+tensor(0.6860, dtype=torch.float64) 0.6870671653375511
+tensor(0.7080, dtype=torch.float64) 0.7102059587528722
+tensor(0.6820, dtype=torch.float64) 0.6824144064958035
+tensor(0.7090, dtype=torch.float64) 0.7112237896365127
+tensor(0.6820, dtype=torch.float64) 0.6822549305287445
+tensor(0.7120, dtype=torch.float64) 0.7140646489661661
+tensor(0.6780, dtype=torch.float64) 0.6778176019994949
+tensor(0.7140, dtype=torch.float64) 0.7161095124396578
+tensor(0.6720, dtype=torch.float64) 0.6717543370193095
+tensor(0.7110, dtype=torch.float64) 0.7134261957705184
+tensor(0.6720, dtype=torch.float64) 0.6716874696465422
+tensor(0.7100, dtype=torch.float64) 0.7128096503573562
+tensor(0.6760, dtype=torch.float64) 0.6755527029739575
+tensor(0.7050, dtype=torch.float64) 0.7078847985519302
+ 72%|███████▏  | 217/300 [00:02<00:00, 85.74it/s]tensor(0.6760, dtype=torch.float64) 0.6755527029739575
+tensor(0.7030, dtype=torch.float64) 0.706030989761782
+tensor(0.6780, dtype=torch.float64) 0.6774501478850059
+tensor(0.7020, dtype=torch.float64) 0.7051593624533412
+tensor(0.6720, dtype=torch.float64) 0.6708600470019824
+tensor(0.7000, dtype=torch.float64) 0.7030951337446225
+tensor(0.6740, dtype=torch.float64) 0.6728258738685118
+tensor(0.6980, dtype=torch.float64) 0.7010882718265422
+tensor(0.6720, dtype=torch.float64) 0.6706699932024082
+tensor(0.6970, dtype=torch.float64) 0.700225474554897
+tensor(0.6720, dtype=torch.float64) 0.6706699932024082
+tensor(0.7000, dtype=torch.float64) 0.7032102671395889
+tensor(0.6720, dtype=torch.float64) 0.6705534470444127
+tensor(0.6970, dtype=torch.float64) 0.7002776498663209
+tensor(0.6720, dtype=torch.float64) 0.6706706207008325
+tensor(0.6940, dtype=torch.float64) 0.6967119670439874
+tensor(0.6740, dtype=torch.float64) 0.6728462936785143
+tensor(0.6940, dtype=torch.float64) 0.6965938967724754
+ 75%|███████▌  | 226/300 [00:03<00:00, 85.66it/s]tensor(0.6720, dtype=torch.float64) 0.6702497180506107
+tensor(0.6920, dtype=torch.float64) 0.6947642797043017
+tensor(0.6720, dtype=torch.float64) 0.6702970383478304
+tensor(0.6930, dtype=torch.float64) 0.6958892699053684
+tensor(0.6720, dtype=torch.float64) 0.6705749972833158
+tensor(0.6940, dtype=torch.float64) 0.6965758430544642
+tensor(0.6740, dtype=torch.float64) 0.6729673213629153
+tensor(0.6930, dtype=torch.float64) 0.6958091655658031
+tensor(0.6780, dtype=torch.float64) 0.6771514832477015
+tensor(0.6960, dtype=torch.float64) 0.6983859519276152
+tensor(0.6780, dtype=torch.float64) 0.6774404042237486
+tensor(0.6920, dtype=torch.float64) 0.6946906910938757
+tensor(0.6740, dtype=torch.float64) 0.6737788568969907
+tensor(0.6930, dtype=torch.float64) 0.6957073122180548
+tensor(0.6720, dtype=torch.float64) 0.6718162583749203
+tensor(0.6950, dtype=torch.float64) 0.6980083638488404
+tensor(0.6720, dtype=torch.float64) 0.6716501469399992
+tensor(0.6950, dtype=torch.float64) 0.6981917395945256
+ 78%|███████▊  | 235/300 [00:03<00:00, 85.53it/s]tensor(0.6740, dtype=torch.float64) 0.6734917975733408
+tensor(0.6930, dtype=torch.float64) 0.6964031459130886
+tensor(0.6740, dtype=torch.float64) 0.6734917975733408
+tensor(0.6930, dtype=torch.float64) 0.696329439722308
+tensor(0.6780, dtype=torch.float64) 0.6780232597657437
+tensor(0.6950, dtype=torch.float64) 0.6984373336547157
+tensor(0.6780, dtype=torch.float64) 0.6782962681428848
+tensor(0.6950, dtype=torch.float64) 0.698667184438746
+tensor(0.6820, dtype=torch.float64) 0.6823458489188996
+tensor(0.6970, dtype=torch.float64) 0.7006921979859886
+tensor(0.6800, dtype=torch.float64) 0.680697254172402
+tensor(0.6990, dtype=torch.float64) 0.7023023144227964
+tensor(0.6800, dtype=torch.float64) 0.680697254172402
+tensor(0.7010, dtype=torch.float64) 0.7041650721971221
+tensor(0.6780, dtype=torch.float64) 0.6786472468647083
+tensor(0.7050, dtype=torch.float64) 0.7079405017576965
+tensor(0.6780, dtype=torch.float64) 0.6786999410628868
+tensor(0.7030, dtype=torch.float64) 0.705809259250605
+ 81%|████████▏ | 244/300 [00:03<00:00, 85.75it/s]tensor(0.6800, dtype=torch.float64) 0.6809589662038629
+tensor(0.7030, dtype=torch.float64) 0.7059601980849305
+tensor(0.6820, dtype=torch.float64) 0.6827566114226682
+tensor(0.7040, dtype=torch.float64) 0.7067947111201404
+tensor(0.6860, dtype=torch.float64) 0.68634166726559
+tensor(0.7050, dtype=torch.float64) 0.7076553654570854
+tensor(0.6820, dtype=torch.float64) 0.682161297308689
+tensor(0.7040, dtype=torch.float64) 0.7066596480474828
+tensor(0.6840, dtype=torch.float64) 0.6839533295033273
+tensor(0.7040, dtype=torch.float64) 0.706341169784958
+tensor(0.6840, dtype=torch.float64) 0.6839533295033273
+tensor(0.7040, dtype=torch.float64) 0.7062726822723785
+tensor(0.6820, dtype=torch.float64) 0.6820143204362308
+tensor(0.7030, dtype=torch.float64) 0.7053810744414588
+tensor(0.6820, dtype=torch.float64) 0.68200274585794
+tensor(0.7050, dtype=torch.float64) 0.7075337318214121
+tensor(0.6860, dtype=torch.float64) 0.6863445852476007
+tensor(0.7050, dtype=torch.float64) 0.7074386745841736
+ 84%|████████▍ | 253/300 [00:03<00:00, 85.91it/s]tensor(0.6860, dtype=torch.float64) 0.6863445852476007
+tensor(0.7060, dtype=torch.float64) 0.708609581593305
+tensor(0.6800, dtype=torch.float64) 0.6805613322294845
+tensor(0.7070, dtype=torch.float64) 0.7096043192495616
+tensor(0.6800, dtype=torch.float64) 0.6805613322294845
+tensor(0.7060, dtype=torch.float64) 0.7085021788371682
+tensor(0.6780, dtype=torch.float64) 0.6786506271109582
+tensor(0.7080, dtype=torch.float64) 0.7103945230669053
+tensor(0.6780, dtype=torch.float64) 0.6784421482419114
+tensor(0.7080, dtype=torch.float64) 0.71043981577162
+tensor(0.6780, dtype=torch.float64) 0.6784421482419114
+tensor(0.7080, dtype=torch.float64) 0.71043981577162
+tensor(0.6780, dtype=torch.float64) 0.6784129299853179
+tensor(0.7090, dtype=torch.float64) 0.7114798083806667
+tensor(0.6780, dtype=torch.float64) 0.6780544585028833
+tensor(0.7060, dtype=torch.float64) 0.7085914514484905
+tensor(0.6800, dtype=torch.float64) 0.6802040546869942
+tensor(0.7060, dtype=torch.float64) 0.7088250069339057
+ 87%|████████▋ | 262/300 [00:03<00:00, 86.07it/s]tensor(0.6760, dtype=torch.float64) 0.6761684346702419
+tensor(0.7040, dtype=torch.float64) 0.7069248831899074
+tensor(0.6780, dtype=torch.float64) 0.6782059622331309
+tensor(0.7030, dtype=torch.float64) 0.7059316128175989
+tensor(0.6760, dtype=torch.float64) 0.6759997883219294
+tensor(0.7020, dtype=torch.float64) 0.7049484815095927
+tensor(0.6740, dtype=torch.float64) 0.6738346625043388
+tensor(0.7010, dtype=torch.float64) 0.7040618665339003
+tensor(0.6720, dtype=torch.float64) 0.6719257453749743
+tensor(0.7030, dtype=torch.float64) 0.7060516839925781
+tensor(0.6700, dtype=torch.float64) 0.6699428001705282
+tensor(0.7010, dtype=torch.float64) 0.704553158742733
+tensor(0.6700, dtype=torch.float64) 0.6703292108922979
+tensor(0.7020, dtype=torch.float64) 0.7056393867515345
+tensor(0.6720, dtype=torch.float64) 0.6726008662273876
+tensor(0.7000, dtype=torch.float64) 0.7036578951077123
+tensor(0.6700, dtype=torch.float64) 0.6701616955279434
+tensor(0.7010, dtype=torch.float64) 0.7042576293154237
+ 90%|█████████ | 271/300 [00:03<00:00, 85.78it/s]tensor(0.6700, dtype=torch.float64) 0.6700679235820562
+tensor(0.7040, dtype=torch.float64) 0.7071877198769698
+tensor(0.6700, dtype=torch.float64) 0.6700497222659861
+tensor(0.7050, dtype=torch.float64) 0.7081934559920928
+tensor(0.6720, dtype=torch.float64) 0.672002398921654
+tensor(0.7050, dtype=torch.float64) 0.7082733828243073
+tensor(0.6760, dtype=torch.float64) 0.6765148523445621
+tensor(0.7060, dtype=torch.float64) 0.7092537106634996
+tensor(0.6800, dtype=torch.float64) 0.6804434498458138
+tensor(0.7040, dtype=torch.float64) 0.7072188277075999
+tensor(0.6820, dtype=torch.float64) 0.6829134111217521
+tensor(0.7060, dtype=torch.float64) 0.7094152003412185
+tensor(0.6800, dtype=torch.float64) 0.6807328465483323
+tensor(0.7120, dtype=torch.float64) 0.7153915628250376
+tensor(0.6780, dtype=torch.float64) 0.6786593377141454
+tensor(0.7090, dtype=torch.float64) 0.712476490016298
+tensor(0.6780, dtype=torch.float64) 0.6787699157930874
+tensor(0.7100, dtype=torch.float64) 0.7135130646205105
+ 93%|█████████▎| 280/300 [00:03<00:00, 85.61it/s]tensor(0.6720, dtype=torch.float64) 0.6734832052330991
+tensor(0.7110, dtype=torch.float64) 0.7144094118718763
+tensor(0.6780, dtype=torch.float64) 0.6798009417627621
+tensor(0.7090, dtype=torch.float64) 0.7123637436484908
+tensor(0.6780, dtype=torch.float64) 0.6798009417627621
+tensor(0.7080, dtype=torch.float64) 0.7114877565906645
+tensor(0.6780, dtype=torch.float64) 0.6798711845064194
+tensor(0.7060, dtype=torch.float64) 0.7096915907098663
+tensor(0.6700, dtype=torch.float64) 0.6718126474805755
+tensor(0.7080, dtype=torch.float64) 0.7117487096329483
+tensor(0.6700, dtype=torch.float64) 0.6718126474805755
+tensor(0.7100, dtype=torch.float64) 0.7136344410282681
+tensor(0.6700, dtype=torch.float64) 0.6716368395962934
+tensor(0.7100, dtype=torch.float64) 0.7137061971549924
+tensor(0.6700, dtype=torch.float64) 0.6716368395962934
+tensor(0.7100, dtype=torch.float64) 0.7133904139640651
+tensor(0.6700, dtype=torch.float64) 0.6717865214688885
+tensor(0.7120, dtype=torch.float64) 0.7150728653426613
+ 96%|█████████▋| 289/300 [00:03<00:00, 85.63it/s]tensor(0.6720, dtype=torch.float64) 0.6737186647261856
+tensor(0.7120, dtype=torch.float64) 0.7149584570354075
+tensor(0.6760, dtype=torch.float64) 0.6776891081629346
+tensor(0.7120, dtype=torch.float64) 0.7149059578603965
+tensor(0.6760, dtype=torch.float64) 0.6771617087265839
+tensor(0.7110, dtype=torch.float64) 0.713841515172023
+tensor(0.6740, dtype=torch.float64) 0.6748570994817105
+tensor(0.7090, dtype=torch.float64) 0.7116077833657398
+tensor(0.6740, dtype=torch.float64) 0.6744689415652045
+tensor(0.7050, dtype=torch.float64) 0.707374462961135
+tensor(0.6700, dtype=torch.float64) 0.6698267732389594
+tensor(0.7010, dtype=torch.float64) 0.7035870447966751
+tensor(0.6740, dtype=torch.float64) 0.6728518164755716
+tensor(0.6990, dtype=torch.float64) 0.701456169537771
+tensor(0.6720, dtype=torch.float64) 0.6712250375716122
+tensor(0.7010, dtype=torch.float64) 0.7034043642810925
+tensor(0.6740, dtype=torch.float64) 0.6734442994608227
+tensor(0.7030, dtype=torch.float64) 0.7054577671531533
+ 99%|█████████▉| 298/300 [00:03<00:00, 85.84it/s]tensor(0.6720, dtype=torch.float64) 0.6716444172898824
+tensor(0.7100, dtype=torch.float64) 0.7121703672939776
+tensor(0.6740, dtype=torch.float64) 0.6732727282448057
+tensor(0.7120, dtype=torch.float64) 0.7140007174585195
+100%|██████████| 300/300 [00:03<00:00, 75.96it/s]
+
+第二阶段训练完成，用时: 3.95秒
+总训练时间: 5221.30秒
+  - 第一阶段: 5217.35秒
+  - 第二阶段: 3.95秒
+训练时间已保存到 mign_training_time.txt

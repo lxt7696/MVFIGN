@@ -1,0 +1,529 @@
+using device 0 NVIDIA GeForce RTX 3090
+DEVICE: cuda
+client_num: 2
+Initializing BFV encryption scheme...
+Encryption initialization completed.
+
+============================================================
+Phase 1: Local Training with Encrypted Parameter Transmission
+============================================================
+
+--- Training Client 0 ---
+[MPC] Generating Beaver triplets for shape x(1895, 1433), w(1433, 1433)...
+[MPC] Beaver triplets generated successfully.
+  [Round 0] Performing MPC secure computation...
+  [MPC] Secure computation completed in 0.0175s, output shape: torch.Size([1895, 1433])
+tensor(0.4204, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0229, device='cuda:0', grad_fn=<MeanBackward0>)
+  Round 0/50, Loss: 0.4433
+tensor(0.1924, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0190, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.2102, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0132, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.2272, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0092, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1725, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0074, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1067, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0071, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0893, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0074, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1108, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0080, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1241, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0084, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1074, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0088, device='cuda:0', grad_fn=<MeanBackward0>)
+  [Round 10] Performing MPC secure computation...
+  [MPC] Secure computation completed in 0.0270s, output shape: torch.Size([1895, 1433])
+tensor(0.0790, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0091, device='cuda:0', grad_fn=<MeanBackward0>)
+  Round 10/50, Loss: 0.0880
+tensor(0.0634, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0092, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0646, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0093, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0693, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0094, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0673, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0094, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0601, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0094, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0541, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0094, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0511, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0093, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0486, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0093, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0456, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0092, device='cuda:0', grad_fn=<MeanBackward0>)
+  [Round 20] Performing MPC secure computation...
+  [MPC] Secure computation completed in 0.0324s, output shape: torch.Size([1895, 1433])
+tensor(0.0442, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0091, device='cuda:0', grad_fn=<MeanBackward0>)
+  Round 20/50, Loss: 0.0533
+tensor(0.0446, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0090, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0442, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0089, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0411, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0089, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0367, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0088, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0349, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0088, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0359, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0088, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0366, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0087, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0350, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0087, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0325, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0087, device='cuda:0', grad_fn=<MeanBackward0>)
+  [Round 30] Performing MPC secure computation...
+  [MPC] Secure computation completed in 0.0252s, output shape: torch.Size([1895, 1433])
+tensor(0.0314, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0087, device='cuda:0', grad_fn=<MeanBackward0>)
+  Round 30/50, Loss: 0.0401
+tensor(0.0317, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0087, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0315, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0087, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0304, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0088, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0295, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0088, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0292, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0088, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0288, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0088, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0279, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0089, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0271, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0089, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0271, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0089, device='cuda:0', grad_fn=<MeanBackward0>)
+  [Round 40] Performing MPC secure computation...
+  [MPC] Secure computation completed in 0.0250s, output shape: torch.Size([1895, 1433])
+tensor(0.0271, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0090, device='cuda:0', grad_fn=<MeanBackward0>)
+  Round 40/50, Loss: 0.0361
+tensor(0.0266, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0090, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0259, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0090, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0255, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0091, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0256, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0091, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0253, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0092, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0249, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0092, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0246, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0092, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0244, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0093, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0242, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0093, device='cuda:0', grad_fn=<MeanBackward0>)
+
+[Client 0] Encrypting model parameters with BFV...
+WARNING: The input does not fit in a single ciphertext, and some operations will be disabled.
+The following operations are disabled in this setup: matmul, matmul_plain, conv2d_im2col, replicate_first_slot.
+If you need to use those operations, try increasing the poly_modulus parameter, to fit your input.
+  Encrypted parameter 'fc1.weight' with shape torch.Size([1433, 1433])
+  Encrypted parameter 'fc1.bias' with shape torch.Size([1433])
+[Client 0] Encryption completed. Total: 2 parameters.
+
+[Server] Aggregating encrypted parameters from client 0...
+[Clients] Receiving and decrypting aggregated parameters...
+[Clients] Decryption time: 1.01s
+[Client 0] Parameters distributed securely to all clients.
+
+
+--- Training Client 1 ---
+[MPC] Generating Beaver triplets for shape x(1895, 1433), w(1433, 1433)...
+[MPC] Beaver triplets generated successfully.
+  [Round 0] Performing MPC secure computation...
+  [MPC] Secure computation completed in 0.0153s, output shape: torch.Size([1895, 1433])
+tensor(0.4077, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0208, device='cuda:0', grad_fn=<MeanBackward0>)
+  Round 0/50, Loss: 0.4285
+tensor(0.1948, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0174, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.2111, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0119, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.2174, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0083, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1663, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0067, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1093, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0064, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0932, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0067, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1092, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0072, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1187, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0077, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.1037, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0080, device='cuda:0', grad_fn=<MeanBackward0>)
+  [Round 10] Performing MPC secure computation...
+  [MPC] Secure computation completed in 0.0272s, output shape: torch.Size([1895, 1433])
+tensor(0.0787, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0083, device='cuda:0', grad_fn=<MeanBackward0>)
+  Round 10/50, Loss: 0.0869
+tensor(0.0647, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0085, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0648, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0086, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0678, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0086, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0651, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0087, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0584, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0087, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0534, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0086, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0510, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0086, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0484, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0086, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0449, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0085, device='cuda:0', grad_fn=<MeanBackward0>)
+  [Round 20] Performing MPC secure computation...
+  [MPC] Secure computation completed in 0.0271s, output shape: torch.Size([1895, 1433])
+tensor(0.0427, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0084, device='cuda:0', grad_fn=<MeanBackward0>)
+  Round 20/50, Loss: 0.0511
+tensor(0.0430, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0084, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0433, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0083, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0407, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0083, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0363, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0082, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0339, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0082, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0346, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0081, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0356, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0081, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0344, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0081, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0319, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0081, device='cuda:0', grad_fn=<MeanBackward0>)
+  [Round 30] Performing MPC secure computation...
+  [MPC] Secure computation completed in 0.0220s, output shape: torch.Size([1895, 1433])
+tensor(0.0305, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0081, device='cuda:0', grad_fn=<MeanBackward0>)
+  Round 30/50, Loss: 0.0385
+tensor(0.0305, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0081, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0305, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0081, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0296, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0081, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0287, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0082, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0282, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0082, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0278, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0082, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0270, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0082, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0263, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0083, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0262, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0083, device='cuda:0', grad_fn=<MeanBackward0>)
+  [Round 40] Performing MPC secure computation...
+  [MPC] Secure computation completed in 0.0220s, output shape: torch.Size([1895, 1433])
+tensor(0.0261, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0083, device='cuda:0', grad_fn=<MeanBackward0>)
+  Round 40/50, Loss: 0.0344
+tensor(0.0256, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0084, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0249, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0084, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0246, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0084, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0246, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0085, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0244, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0085, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0239, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0085, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0236, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0086, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0234, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0086, device='cuda:0', grad_fn=<MeanBackward0>)
+tensor(0.0232, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0087, device='cuda:0', grad_fn=<MeanBackward0>)
+
+[Client 1] Encrypting model parameters with BFV...
+WARNING: The input does not fit in a single ciphertext, and some operations will be disabled.
+The following operations are disabled in this setup: matmul, matmul_plain, conv2d_im2col, replicate_first_slot.
+If you need to use those operations, try increasing the poly_modulus parameter, to fit your input.
+  Encrypted parameter 'fc1.weight' with shape torch.Size([1433, 1433])
+  Encrypted parameter 'fc1.bias' with shape torch.Size([1433])
+[Client 1] Encryption completed. Total: 2 parameters.
+
+[Server] Aggregating encrypted parameters from client 1...
+[Clients] Receiving and decrypting aggregated parameters...
+[Clients] Decryption time: 1.01s
+[Client 1] Parameters distributed securely to all clients.
+
+============================================================
+Phase 1 completed in 1488.12s (with HE encryption)
+Phase 1 Completed: All clients trained with encrypted parameter sharing
+============================================================
+
+
+============================================================
+Phase 2: Global Model Training
+============================================================
+tran.0.fc1.weight
+tran.0.fc1.bias
+tran.1.fc1.weight
+tran.1.fc1.bias
+classifier.fc1.weight
+classifier.fc1.bias
+classifier.fc2.weight
+classifier.fc2.bias
+classifier.layernorm.weight
+classifier.layernorm.bias
+tran.0.fc1.weight
+tran.0.fc1.bias
+tran.1.fc1.weight
+tran.1.fc1.bias
+classifier.fc1.weight
+classifier.fc1.bias
+classifier.fc2.weight
+classifier.fc2.bias
+classifier.layernorm.weight
+classifier.layernorm.bias
+  0%|          | 0/300 [00:00<?, ?it/s]tensor(0.3149, dtype=torch.float64) 0.15390520848199762
+tensor(0.2583, dtype=torch.float64) 0.2179667216161487
+tensor(0.3112, dtype=torch.float64) 0.2425972024286138
+tensor(0.3850, dtype=torch.float64) 0.3159977283455721
+tensor(0.3161, dtype=torch.float64) 0.2787055941357578
+tensor(0.4686, dtype=torch.float64) 0.4482517274099562
+tensor(0.4662, dtype=torch.float64) 0.436794612921273
+tensor(0.3592, dtype=torch.float64) 0.32365974262445596
+tensor(0.4256, dtype=torch.float64) 0.34796531600313607
+tensor(0.4354, dtype=torch.float64) 0.4065383261808328
+tensor(0.3616, dtype=torch.float64) 0.3733113436348784
+tensor(0.4736, dtype=torch.float64) 0.42722026916831696
+tensor(0.5363, dtype=torch.float64) 0.4791100547230159
+tensor(0.5621, dtype=torch.float64) 0.5051763896186999
+tensor(0.5830, dtype=torch.float64) 0.5221595318640038
+tensor(0.5904, dtype=torch.float64) 0.5307869467836376
+tensor(0.6039, dtype=torch.float64) 0.551139799932061
+tensor(0.6482, dtype=torch.float64) 0.6108596152261746
+  6%|▌         | 18/300 [00:00<00:01, 171.71it/s]tensor(0.6777, dtype=torch.float64) 0.6480650355601254
+tensor(0.6925, dtype=torch.float64) 0.6640939307105692
+tensor(0.6704, dtype=torch.float64) 0.6441816606567446
+tensor(0.6617, dtype=torch.float64) 0.6361658344740788
+tensor(0.6445, dtype=torch.float64) 0.6205935030480522
+tensor(0.6433, dtype=torch.float64) 0.6203951334830191
+tensor(0.6544, dtype=torch.float64) 0.6400174274006325
+tensor(0.6568, dtype=torch.float64) 0.6484875736063903
+tensor(0.6876, dtype=torch.float64) 0.6811108036113771
+tensor(0.6765, dtype=torch.float64) 0.6749131204729997
+tensor(0.6667, dtype=torch.float64) 0.6715403997303576
+tensor(0.6704, dtype=torch.float64) 0.6725251959056416
+tensor(0.6900, dtype=torch.float64) 0.6849857118434465
+tensor(0.7171, dtype=torch.float64) 0.7062149210115856
+tensor(0.7146, dtype=torch.float64) 0.7035377146131279
+tensor(0.7109, dtype=torch.float64) 0.7005209439647581
+tensor(0.7036, dtype=torch.float64) 0.6901511819380521
+tensor(0.6999, dtype=torch.float64) 0.6842424380364956
+ 12%|█▏        | 36/300 [00:00<00:01, 176.00it/s]tensor(0.7146, dtype=torch.float64) 0.699777600616972
+tensor(0.7097, dtype=torch.float64) 0.6963780219807099
+tensor(0.7109, dtype=torch.float64) 0.6996223182226646
+tensor(0.7171, dtype=torch.float64) 0.7112592157330179
+tensor(0.7196, dtype=torch.float64) 0.7157366676069651
+tensor(0.7269, dtype=torch.float64) 0.7241459671522221
+tensor(0.7306, dtype=torch.float64) 0.7285681644612694
+tensor(0.7343, dtype=torch.float64) 0.7324844990680405
+tensor(0.7392, dtype=torch.float64) 0.7376007288826592
+tensor(0.7319, dtype=torch.float64) 0.7307201523375095
+tensor(0.7319, dtype=torch.float64) 0.7303350314681921
+tensor(0.7343, dtype=torch.float64) 0.7320188880539449
+tensor(0.7380, dtype=torch.float64) 0.7347702876146808
+tensor(0.7355, dtype=torch.float64) 0.7310665711828462
+tensor(0.7355, dtype=torch.float64) 0.7310698007322065
+tensor(0.7380, dtype=torch.float64) 0.733721736152229
+tensor(0.7380, dtype=torch.float64) 0.7342394438317777
+tensor(0.7306, dtype=torch.float64) 0.7266826596042704
+tensor(0.7319, dtype=torch.float64) 0.7282357587149716
+ 18%|█▊        | 55/300 [00:00<00:01, 178.58it/s]tensor(0.7343, dtype=torch.float64) 0.7310177783109054
+tensor(0.7368, dtype=torch.float64) 0.7340670542111889
+tensor(0.7331, dtype=torch.float64) 0.730395628297536
+tensor(0.7405, dtype=torch.float64) 0.7381858393128442
+tensor(0.7368, dtype=torch.float64) 0.7346135465942124
+tensor(0.7380, dtype=torch.float64) 0.7359722294073759
+tensor(0.7392, dtype=torch.float64) 0.7374000931704784
+tensor(0.7392, dtype=torch.float64) 0.7372611270795224
+tensor(0.7355, dtype=torch.float64) 0.7332532724470332
+tensor(0.7380, dtype=torch.float64) 0.7356703017965063
+tensor(0.7405, dtype=torch.float64) 0.7382145562886202
+tensor(0.7368, dtype=torch.float64) 0.7347536635494449
+tensor(0.7355, dtype=torch.float64) 0.7337626818235881
+tensor(0.7368, dtype=torch.float64) 0.7349624117428974
+tensor(0.7380, dtype=torch.float64) 0.7360428659333074
+tensor(0.7380, dtype=torch.float64) 0.7362080244079576
+tensor(0.7380, dtype=torch.float64) 0.7362583415324783
+tensor(0.7392, dtype=torch.float64) 0.7376023017294815
+tensor(0.7392, dtype=torch.float64) 0.7378280260376795
+ 25%|██▍       | 74/300 [00:00<00:01, 181.05it/s]tensor(0.7405, dtype=torch.float64) 0.7390657524273743
+tensor(0.7392, dtype=torch.float64) 0.7378632530354035
+tensor(0.7380, dtype=torch.float64) 0.7367440445453365
+tensor(0.7380, dtype=torch.float64) 0.7365240135832303
+tensor(0.7380, dtype=torch.float64) 0.736664584227501
+tensor(0.7405, dtype=torch.float64) 0.7395070421783178
+tensor(0.7417, dtype=torch.float64) 0.7408313813470805
+tensor(0.7429, dtype=torch.float64) 0.7420980917507365
+tensor(0.7417, dtype=torch.float64) 0.7409190574754712
+tensor(0.7429, dtype=torch.float64) 0.7421360985156383
+tensor(0.7442, dtype=torch.float64) 0.7433143402174343
+tensor(0.7454, dtype=torch.float64) 0.7444866290688203
+tensor(0.7466, dtype=torch.float64) 0.7455876779074444
+tensor(0.7442, dtype=torch.float64) 0.7434236368743276
+tensor(0.7429, dtype=torch.float64) 0.7423213252906746
+tensor(0.7405, dtype=torch.float64) 0.7400547684128227
+tensor(0.7380, dtype=torch.float64) 0.737687486937931
+tensor(0.7405, dtype=torch.float64) 0.740011842348615
+tensor(0.7405, dtype=torch.float64) 0.7399102098929038
+ 31%|███       | 93/300 [00:00<00:01, 181.83it/s]tensor(0.7392, dtype=torch.float64) 0.7383554442865798
+tensor(0.7405, dtype=torch.float64) 0.7395685464534024
+tensor(0.7417, dtype=torch.float64) 0.7408023459131103
+tensor(0.7392, dtype=torch.float64) 0.7386026533563167
+tensor(0.7392, dtype=torch.float64) 0.7386026533563167
+tensor(0.7368, dtype=torch.float64) 0.7363181373906006
+tensor(0.7368, dtype=torch.float64) 0.7362630968822768
+tensor(0.7368, dtype=torch.float64) 0.7360940766786329
+tensor(0.7392, dtype=torch.float64) 0.7380747408157841
+tensor(0.7368, dtype=torch.float64) 0.7354141024114111
+tensor(0.7368, dtype=torch.float64) 0.735955042553135
+tensor(0.7405, dtype=torch.float64) 0.7399816919500076
+tensor(0.7343, dtype=torch.float64) 0.7336060927985326
+tensor(0.7355, dtype=torch.float64) 0.7347677188213678
+tensor(0.7343, dtype=torch.float64) 0.7332634744077028
+tensor(0.7368, dtype=torch.float64) 0.7355398349331442
+tensor(0.7392, dtype=torch.float64) 0.7377607517261882
+tensor(0.7368, dtype=torch.float64) 0.7351452818059555
+tensor(0.7368, dtype=torch.float64) 0.7354033858057737
+ 37%|███▋      | 112/300 [00:00<00:01, 182.60it/s]tensor(0.7319, dtype=torch.float64) 0.7305331788480455
+tensor(0.7319, dtype=torch.float64) 0.7307968090516014
+tensor(0.7343, dtype=torch.float64) 0.73361454417348
+tensor(0.7368, dtype=torch.float64) 0.7360928196153944
+tensor(0.7368, dtype=torch.float64) 0.7359388429221725
+tensor(0.7405, dtype=torch.float64) 0.7393629918390715
+tensor(0.7355, dtype=torch.float64) 0.7343827760035438
+tensor(0.7355, dtype=torch.float64) 0.7341610559969788
+tensor(0.7331, dtype=torch.float64) 0.7317469414246561
+tensor(0.7306, dtype=torch.float64) 0.7293862789626854
+tensor(0.7343, dtype=torch.float64) 0.7328763368512006
+tensor(0.7331, dtype=torch.float64) 0.7316889144990214
+tensor(0.7319, dtype=torch.float64) 0.7305015368188482
+tensor(0.7392, dtype=torch.float64) 0.738302570000781
+tensor(0.7331, dtype=torch.float64) 0.7324169553342089
+tensor(0.7294, dtype=torch.float64) 0.7289070942248491
+tensor(0.7306, dtype=torch.float64) 0.7301313963177035
+tensor(0.7331, dtype=torch.float64) 0.7317860130407098
+tensor(0.7331, dtype=torch.float64) 0.7314292397467977
+ 44%|████▎     | 131/300 [00:00<00:00, 183.21it/s]tensor(0.7380, dtype=torch.float64) 0.7365842563231806
+tensor(0.7368, dtype=torch.float64) 0.7357934289606957
+tensor(0.7343, dtype=torch.float64) 0.7336970411346598
+tensor(0.7380, dtype=torch.float64) 0.7366867455404883
+tensor(0.7368, dtype=torch.float64) 0.7355083477229906
+tensor(0.7380, dtype=torch.float64) 0.7366568552641541
+tensor(0.7355, dtype=torch.float64) 0.7343417940001913
+tensor(0.7343, dtype=torch.float64) 0.7331632148186136
+tensor(0.7331, dtype=torch.float64) 0.7320654427700615
+tensor(0.7355, dtype=torch.float64) 0.7348310487118748
+tensor(0.7368, dtype=torch.float64) 0.7358008985027901
+tensor(0.7380, dtype=torch.float64) 0.7364821156576411
+tensor(0.7355, dtype=torch.float64) 0.7335300132727453
+tensor(0.7306, dtype=torch.float64) 0.7288643304689744
+tensor(0.7257, dtype=torch.float64) 0.7237859549966348
+tensor(0.7380, dtype=torch.float64) 0.7365494857905999
+tensor(0.7392, dtype=torch.float64) 0.7377740259687713
+tensor(0.7319, dtype=torch.float64) 0.7311331084514908
+tensor(0.7245, dtype=torch.float64) 0.7236159648163517
+ 50%|█████     | 150/300 [00:00<00:00, 183.57it/s]tensor(0.7245, dtype=torch.float64) 0.7233731915331425
+tensor(0.7355, dtype=torch.float64) 0.7338184355394881
+tensor(0.7368, dtype=torch.float64) 0.7344717221938534
+tensor(0.7306, dtype=torch.float64) 0.7286478787000896
+tensor(0.7269, dtype=torch.float64) 0.7263130636055819
+tensor(0.7331, dtype=torch.float64) 0.7323068446881326
+tensor(0.7355, dtype=torch.float64) 0.7346113365097535
+tensor(0.7269, dtype=torch.float64) 0.7256014910576302
+tensor(0.7269, dtype=torch.float64) 0.7249461252662774
+tensor(0.7282, dtype=torch.float64) 0.7264355333503255
+tensor(0.7306, dtype=torch.float64) 0.7298951623714449
+tensor(0.7319, dtype=torch.float64) 0.7327620829934243
+tensor(0.7343, dtype=torch.float64) 0.7355574489493062
+tensor(0.7331, dtype=torch.float64) 0.7322020503787254
+tensor(0.7220, dtype=torch.float64) 0.7194186771320217
+tensor(0.7294, dtype=torch.float64) 0.7290782232725248
+tensor(0.7343, dtype=torch.float64) 0.7348949897764715
+tensor(0.7269, dtype=torch.float64) 0.7262026350937094
+tensor(0.7269, dtype=torch.float64) 0.7252882130963589
+ 56%|█████▋    | 169/300 [00:00<00:00, 183.88it/s]tensor(0.7294, dtype=torch.float64) 0.7285672167508127
+tensor(0.7319, dtype=torch.float64) 0.7311972544498376
+tensor(0.7319, dtype=torch.float64) 0.7307061822070391
+tensor(0.7294, dtype=torch.float64) 0.7283311448778549
+tensor(0.7294, dtype=torch.float64) 0.7291974002901064
+tensor(0.7232, dtype=torch.float64) 0.7242042094000776
+tensor(0.7232, dtype=torch.float64) 0.7243788419483846
+tensor(0.7245, dtype=torch.float64) 0.7246086211920749
+tensor(0.7331, dtype=torch.float64) 0.7321635207151697
+tensor(0.7282, dtype=torch.float64) 0.7258181568562176
+tensor(0.7331, dtype=torch.float64) 0.7319622274003166
+tensor(0.7183, dtype=torch.float64) 0.7189617547912117
+tensor(0.7208, dtype=torch.float64) 0.7207890438576774
+tensor(0.7109, dtype=torch.float64) 0.7110608493153023
+tensor(0.7171, dtype=torch.float64) 0.7158425218327665
+tensor(0.7183, dtype=torch.float64) 0.7167269593405781
+tensor(0.7134, dtype=torch.float64) 0.7135945709830752
+tensor(0.7171, dtype=torch.float64) 0.7179453199355309
+tensor(0.7208, dtype=torch.float64) 0.7221583168512289
+ 63%|██████▎   | 188/300 [00:01<00:00, 184.02it/s]tensor(0.7183, dtype=torch.float64) 0.7164078011547674
+tensor(0.7146, dtype=torch.float64) 0.7115554540624275
+tensor(0.7109, dtype=torch.float64) 0.7095402573905265
+tensor(0.7208, dtype=torch.float64) 0.7206601545029048
+tensor(0.7282, dtype=torch.float64) 0.7285737612112289
+tensor(0.7232, dtype=torch.float64) 0.7230927243695668
+tensor(0.7171, dtype=torch.float64) 0.7141427620315788
+tensor(0.7134, dtype=torch.float64) 0.7088322541275508
+tensor(0.7257, dtype=torch.float64) 0.7251890353809844
+tensor(0.7245, dtype=torch.float64) 0.7254789249113733
+tensor(0.7245, dtype=torch.float64) 0.7250705962013498
+tensor(0.7208, dtype=torch.float64) 0.7191741632067932
+tensor(0.7183, dtype=torch.float64) 0.7186576267435667
+tensor(0.7183, dtype=torch.float64) 0.7184004916180904
+tensor(0.7183, dtype=torch.float64) 0.7175280916650787
+tensor(0.7269, dtype=torch.float64) 0.7254735378648195
+tensor(0.7220, dtype=torch.float64) 0.7228337941243135
+tensor(0.7232, dtype=torch.float64) 0.7241401567390487
+tensor(0.7196, dtype=torch.float64) 0.7196850471659033
+ 69%|██████▉   | 207/300 [00:01<00:00, 184.19it/s]tensor(0.7294, dtype=torch.float64) 0.7280229926879642
+tensor(0.7331, dtype=torch.float64) 0.7320406922930957
+tensor(0.7319, dtype=torch.float64) 0.7317426654908598
+tensor(0.7269, dtype=torch.float64) 0.7269800949797917
+tensor(0.7208, dtype=torch.float64) 0.7200701396384181
+tensor(0.7220, dtype=torch.float64) 0.7197494926195723
+tensor(0.7306, dtype=torch.float64) 0.7304545733441649
+tensor(0.7269, dtype=torch.float64) 0.727671548608632
+tensor(0.7319, dtype=torch.float64) 0.7319034008948022
+tensor(0.7282, dtype=torch.float64) 0.7282598137730514
+tensor(0.7257, dtype=torch.float64) 0.7251983386941149
+tensor(0.7282, dtype=torch.float64) 0.7273421913591077
+tensor(0.7245, dtype=torch.float64) 0.7222262822038139
+tensor(0.7196, dtype=torch.float64) 0.7174798644997384
+tensor(0.7220, dtype=torch.float64) 0.7231026727551476
+tensor(0.7257, dtype=torch.float64) 0.7267787964985901
+tensor(0.7109, dtype=torch.float64) 0.7088537185430464
+tensor(0.7183, dtype=torch.float64) 0.7171573685916466
+tensor(0.7097, dtype=torch.float64) 0.7099020986187544
+ 75%|███████▌  | 226/300 [00:01<00:00, 184.15it/s]tensor(0.7183, dtype=torch.float64) 0.7185525989765611
+tensor(0.7220, dtype=torch.float64) 0.721510826921425
+tensor(0.7232, dtype=torch.float64) 0.7214313243084184
+tensor(0.7159, dtype=torch.float64) 0.7162857098691389
+tensor(0.7171, dtype=torch.float64) 0.7158131647242469
+tensor(0.7183, dtype=torch.float64) 0.716725725490989
+tensor(0.7183, dtype=torch.float64) 0.7176315703532493
+tensor(0.7220, dtype=torch.float64) 0.7203245178462353
+tensor(0.7060, dtype=torch.float64) 0.7062404220983216
+tensor(0.7122, dtype=torch.float64) 0.7110510712529876
+tensor(0.7183, dtype=torch.float64) 0.7158229324898332
+tensor(0.7146, dtype=torch.float64) 0.7140299439060391
+tensor(0.7171, dtype=torch.float64) 0.7184394734782644
+tensor(0.7073, dtype=torch.float64) 0.7044849952380045
+tensor(0.7146, dtype=torch.float64) 0.7132266028729617
+tensor(0.7060, dtype=torch.float64) 0.7068652596657105
+tensor(0.7159, dtype=torch.float64) 0.7125277918343541
+tensor(0.7109, dtype=torch.float64) 0.7083669995998826
+tensor(0.7085, dtype=torch.float64) 0.7080273233847161
+ 82%|████████▏ | 245/300 [00:01<00:00, 184.37it/s]tensor(0.7196, dtype=torch.float64) 0.7187702614259431
+tensor(0.7220, dtype=torch.float64) 0.7218985006088819
+tensor(0.7196, dtype=torch.float64) 0.7184497811870543
+tensor(0.7208, dtype=torch.float64) 0.7195087615355218
+tensor(0.7146, dtype=torch.float64) 0.7128189557941725
+tensor(0.7183, dtype=torch.float64) 0.7176142563288046
+tensor(0.7122, dtype=torch.float64) 0.7128522143729904
+tensor(0.7171, dtype=torch.float64) 0.7156016342537769
+tensor(0.7159, dtype=torch.float64) 0.7130428146966721
+tensor(0.7146, dtype=torch.float64) 0.7136727986433139
+tensor(0.7146, dtype=torch.float64) 0.7150826291304866
+tensor(0.7159, dtype=torch.float64) 0.7147253648775759
+tensor(0.7196, dtype=torch.float64) 0.7175122749289266
+tensor(0.7183, dtype=torch.float64) 0.7166720851262577
+tensor(0.7134, dtype=torch.float64) 0.714057514496199
+tensor(0.7122, dtype=torch.float64) 0.7127551170813731
+tensor(0.7183, dtype=torch.float64) 0.716055490733806
+tensor(0.7134, dtype=torch.float64) 0.7108420357137011
+tensor(0.7097, dtype=torch.float64) 0.7098063629759582
+ 88%|████████▊ | 264/300 [00:01<00:00, 184.19it/s]tensor(0.7208, dtype=torch.float64) 0.7197839715220937
+tensor(0.7245, dtype=torch.float64) 0.7224366430230968
+tensor(0.7159, dtype=torch.float64) 0.7162545920718136
+tensor(0.7097, dtype=torch.float64) 0.7088756929757719
+tensor(0.7146, dtype=torch.float64) 0.7111879654269494
+tensor(0.7134, dtype=torch.float64) 0.7103807850740069
+tensor(0.7171, dtype=torch.float64) 0.7159788222876385
+tensor(0.7097, dtype=torch.float64) 0.7095597153667879
+tensor(0.7109, dtype=torch.float64) 0.7096690369848601
+tensor(0.7085, dtype=torch.float64) 0.7090681998824581
+tensor(0.7171, dtype=torch.float64) 0.7166153938227608
+tensor(0.7208, dtype=torch.float64) 0.7181412939433708
+tensor(0.7196, dtype=torch.float64) 0.7147021665311414
+tensor(0.7122, dtype=torch.float64) 0.7129915236728521
+tensor(0.7097, dtype=torch.float64) 0.7114799569938282
+tensor(0.7146, dtype=torch.float64) 0.7114958078876968
+tensor(0.7220, dtype=torch.float64) 0.7198778181954801
+tensor(0.6974, dtype=torch.float64) 0.6958012157610873
+tensor(0.7208, dtype=torch.float64) 0.718835600471101
+ 94%|█████████▍| 283/300 [00:01<00:00, 184.15it/s]tensor(0.7319, dtype=torch.float64) 0.7318390542497675
+tensor(0.7122, dtype=torch.float64) 0.7129295085249233
+tensor(0.7073, dtype=torch.float64) 0.7050151226295001
+tensor(0.7048, dtype=torch.float64) 0.6989548513190904
+tensor(0.7134, dtype=torch.float64) 0.7134346991285218
+tensor(0.6999, dtype=torch.float64) 0.7050476154233662
+tensor(0.7208, dtype=torch.float64) 0.7192540452889293
+tensor(0.7011, dtype=torch.float64) 0.6967598590877376
+tensor(0.7073, dtype=torch.float64) 0.7050102304169643
+tensor(0.7208, dtype=torch.float64) 0.7199540176014048
+tensor(0.7196, dtype=torch.float64) 0.7204646590961084
+tensor(0.7073, dtype=torch.float64) 0.7100173269230003
+tensor(0.7085, dtype=torch.float64) 0.7075035177752842
+tensor(0.7183, dtype=torch.float64) 0.7177496081005065
+tensor(0.7183, dtype=torch.float64) 0.7168720972239605
+tensor(0.7159, dtype=torch.float64) 0.7158452327056563
+tensor(0.7171, dtype=torch.float64) 0.7167746885375094
+100%|██████████| 300/300 [00:01<00:00, 182.95it/s]
+
+============================================================
+ABLATION RESULTS:
+  Phase 1 Time: 1488.12s
+  Phase 2 Time: 1.64s
+  Total Time: 1489.76s
+  Best Accuracy: 0.7466
+============================================================
+
+using device 0 NVIDIA GeForce RTX 3090
+DEVICE: cuda
+client_num: 2
+Traceback (most recent call last):
+  File "/home/lxt/project/MVFIGN/v_main_mpche.py", line 74, in <module>
+    user_features,user_labels,client_adj,label_num,train_features,train_labels,test_features,test_labels,at_f,at_l,mpc_beaver=deal_dataset(client_num,args.rate,args.r)
+  File "/home/lxt/project/MVFIGN/v_deal_mpche.py", line 157, in deal_dataset
+    adj1=adj[train_index,:][:,train_index]
+  File "/home/lxt/pytorch_env/lib/python3.9/site-packages/scipy/sparse/_index.py", line 52, in __getitem__
+    row, col = self._validate_indices(key)
+  File "/home/lxt/pytorch_env/lib/python3.9/site-packages/scipy/sparse/_index.py", line 186, in _validate_indices
+    row = self._asindices(row, M)
+  File "/home/lxt/pytorch_env/lib/python3.9/site-packages/scipy/sparse/_index.py", line 220, in _asindices
+    raise IndexError('index (%d) out of range' % max_indx)
+IndexError: index (19716) out of range

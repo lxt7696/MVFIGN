@@ -1,0 +1,244 @@
+# 文件路径: /home/lxt/project/MVFIGN/mpc_utils.py
+# MPC 工具类，用于与 MP-SPDZ 交互
+
+import subprocess
+import numpy as np
+import torch
+import os
+import tempfile
+import time
+
+class MPSPDZManager:
+    """MP-SPDZ 安全计算管理器"""
+    
+    def __init__(self, party_id, mpspdz_root="/home/lxt/project/MVFIGN/MP-SPDZ"):
+        """
+        初始化 MPC 管理器
+        
+        Args:
+            party_id: 参与方ID (0 or 1)
+            mpspdz_root: MP-SPDZ 安装根目录
+        """
+        self.party_id = party_id
+        self.mpspdz_root = mpspdz_root
+        self.player_data_dir = os.path.join(mpspdz_root, "Player-Data")
+        
+        # 确保目录存在
+        os.makedirs(self.player_data_dir, exist_ok=True)
+        
+        print(f"[Party {party_id}] MPC Manager initialized")
+        print(f"  MP-SPDZ Root: {mpspdz_root}")
+        
+    def write_inputs(self, data_dict, session_id=0):
+        """
+        将数据写入 MP-SPDZ 输入文件
+        
+        Args:
+            data_dict: 字典 {'A': tensor, 'W': tensor} for party 0
+                      或 {'B': tensor} for party 1
+            session_id: 会话ID，用于多次计算
+        """
+        input_file = os.path.join(
+            self.player_data_dir, 
+            f"Input-P{self.party_id}-{session_id}"
+        )
+        
+        with open(input_file, 'w') as f:
+            for key, tensor in data_dict.items():
+                if tensor is None:
+                    continue
+                    
+                # 转换为 numpy
+                if isinstance(tensor, torch.Tensor):
+                    data = tensor.detach().cpu().numpy()
+                else:
+                    data = tensor
+                
+                # 展平并写入
+                flat_data = data.flatten()
+                for val in flat_data:
+                    f.write(f"{float(val)}\n")
+        
+        print(f"[Party {self.party_id}] Wrote {len(flat_data)} values to {input_file}")
+    
+    def read_outputs(self, shape, session_id=0):
+        """
+        从 MP-SPDZ 输出文件读取结果
+        
+        Args:
+            shape: 输出张量形状 (m, n)
+            session_id: 会话ID
+            
+        Returns:
+            torch.Tensor
+        """
+        output_file = os.path.join(
+            self.player_data_dir,
+            f"Output-P{self.party_id}-{session_id}"
+        )
+        
+        # 等待输出文件生成
+        max_wait = 60  # 最多等待60秒
+        wait_time = 0
+        while not os.path.exists(output_file) and wait_time < max_wait:
+            time.sleep(0.5)
+            wait_time += 0.5
+        
+        if not os.path.exists(output_file):
+            raise FileNotFoundError(f"Output file not found: {output_file}")
+        
+        # 读取数据
+        with open(output_file, 'r') as f:
+            values = [float(line.strip()) for line in f if line.strip()]
+        
+        # 转换为 tensor
+        result = np.array(values).reshape(shape)
+        print(f"[Party {self.party_id}] Read output shape {result.shape}")
+        
+        return torch.from_numpy(result).float()
+    
+    def compile_program(self, program_name="secure_matmul", m=128, n=256):
+        """
+        编译 MPC 程序
+        
+        Args:
+            program_name: 程序名称
+            m, n: 矩阵维度
+        """
+        compile_cmd = (
+            f"cd {self.mpspdz_root} && "
+            f"./compile.py -R 64 {program_name}"
+        )
+        
+        print(f"[Party {self.party_id}] Compiling MPC program...")
+        print(f"  Command: {compile_cmd}")
+        
+        result = subprocess.run(
+            compile_cmd, 
+            shell=True, 
+            capture_output=True, 
+            text=True
+        )
+        
+        if result.returncode != 0:
+            print(f"Compilation error: {result.stderr}")
+            raise RuntimeError("MPC program compilation failed")
+        
+        print(f"[Party {self.party_id}] Compilation successful")
+    
+    def run_party(self, program_name="secure_matmul", 
+                  host="localhost", port_base=5000):
+        """
+        运行 MPC 参与方
+        
+        Args:
+            program_name: 程序名称
+            host: 对方主机地址
+            port_base: 基础端口号
+        """
+        # 运行命令
+        run_cmd = (
+            f"cd {self.mpspdz_root} && "
+            f"./semi2k-party.x -p {self.party_id} "
+            f"-h {host} -pn {port_base} "
+            f"{program_name}"
+        )
+        
+        print(f"[Party {self.party_id}] Running MPC computation...")
+        print(f"  Command: {run_cmd}")
+        
+        result = subprocess.run(
+            run_cmd,
+            shell=True,
+            capture_output=True,
+            text=True,
+            timeout=120  # 2分钟超时
+        )
+        
+        if result.returncode != 0:
+            print(f"Execution error: {result.stderr}")
+            raise RuntimeError("MPC execution failed")
+        
+        print(f"[Party {self.party_id}] MPC computation completed")
+        print(f"  Output: {result.stdout}")
+    
+    def secure_matrix_multiply(self, A=None, B=None, W=None, 
+                               compile_once=True, session_id=0):
+        """
+        安全计算 (A - B) * W
+        
+        Args:
+            A: Party 0 的矩阵 (m, n)
+            B: Party 1 的矩阵 (m, n)
+            W: Party 0 的权重 (n, n)
+            compile_once: 是否只编译一次
+            session_id: 会话ID
+            
+        Returns:
+            结果矩阵 (m, n)
+        """
+        # 准备输入
+        if self.party_id == 0:
+            if A is None or W is None:
+                raise ValueError("Party 0 must provide A and W")
+            m, n = A.shape
+            self.write_inputs({'A': A, 'W': W}, session_id)
+        else:  # party_id == 1
+            if B is None:
+                raise ValueError("Party 1 must provide B")
+            m, n = B.shape
+            self.write_inputs({'B': B}, session_id)
+        
+        # 编译程序（只在第一次或指定时编译）
+        if not compile_once or session_id == 0:
+            self.compile_program("secure_matmul", m, n)
+        
+        # 运行 MPC
+        self.run_party("secure_matmul")
+        
+        # 读取结果
+        result = self.read_outputs((m, n), session_id)
+        
+        return result
+    
+    def cleanup(self, session_id=0):
+        """清理临时文件"""
+        files_to_remove = [
+            f"Input-P{self.party_id}-{session_id}",
+            f"Output-P{self.party_id}-{session_id}"
+        ]
+        
+        for filename in files_to_remove:
+            filepath = os.path.join(self.player_data_dir, filename)
+            if os.path.exists(filepath):
+                os.remove(filepath)
+        
+        print(f"[Party {self.party_id}] Cleaned up session {session_id}")
+
+
+# 简单的测试函数
+if __name__ == "__main__":
+    import argparse
+    
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--party', type=int, required=True, choices=[0, 1])
+    parser.add_argument('--m', type=int, default=4)
+    parser.add_argument('--n', type=int, default=4)
+    args = parser.parse_args()
+    
+    # 创建管理器
+    mpc = MPSPDZManager(party_id=args.party)
+    
+    # 测试数据
+    if args.party == 0:
+        A = torch.randn(args.m, args.n)
+        W = torch.randn(args.n, args.n)
+        print(f"Party 0 - A:\n{A}")
+        print(f"Party 0 - W:\n{W}")
+        result = mpc.secure_matrix_multiply(A=A, W=W)
+    else:
+        B = torch.randn(args.m, args.n)
+        print(f"Party 1 - B:\n{B}")
+        result = mpc.secure_matrix_multiply(B=B)
+    
+    print(f"\nParty {args.party} - Result:\n{result}")

@@ -1,0 +1,325 @@
+# 文件路径: /home/lxt/project/MVFIGN/v_main_mpc.py
+# 这是修改后的主程序，集成了 MPC 功能
+
+import argparse
+import torch
+from v_deal import deal_dataset
+import numpy as np
+from v_model_mpc import SecureTr, SecureGMLP, Tr, GMLP  # 导入新的安全模型
+import torch.optim as optim
+from tqdm import tqdm
+import sklearn
+from sklearn.metrics import f1_score
+import torch.nn.functional as F
+import math
+from collections import defaultdict
+import collections
+import sys
+import os
+
+torch.cuda.set_device(0)
+
+parser = argparse.ArgumentParser(description='pytorch version of TEE-VFL with MPC')
+
+# 原有参数
+parser.add_argument('--no-cuda', action='store_true', default=False,
+                    help='Disables CUDA training.')
+parser.add_argument('--client_num', type=int, default='2')
+parser.add_argument('--dataSet', type=str, default='Cora')
+parser.add_argument('--rate', type=float, default=1.0)
+parser.add_argument('--round1', type=int, default=10)
+parser.add_argument('--round2', type=int, default=300)
+parser.add_argument('--epochs1', type=int, default=1)
+parser.add_argument('--epochs2', type=int, default=10)
+parser.add_argument('--epochs3', type=int, default=300)
+parser.add_argument('--lr', type=float, default=0.01,
+                    help='learning rate.')
+parser.add_argument('--c', type=int, default=2)
+parser.add_argument('--d', type=int, default=2)
+parser.add_argument('--cm', type=float, default=1)
+parser.add_argument('--weight_decay', type=float, default=5e-5,
+                    help='Weight decay (L2 loss on parameters).')
+parser.add_argument('--weight_decay1', type=float, default=5e-4,
+                    help='Weight decay (L2 loss on parameters).')
+parser.add_argument('--dropout', type=float, default=0.6,
+                    help='Dropout rate (1 - keep probability).')
+parser.add_argument('--alpha', type=float, default=0.6)
+parser.add_argument('--batch_size', type=int, default=2048)
+parser.add_argument('--hidden', type=int, default=256)
+parser.add_argument('--r', type=int, default=3)
+parser.add_argument('--cuda', action='store_true', help='use CUDA')
+
+# 新增 MPC 相关参数
+parser.add_argument('--use_mpc', action='store_true', default=False,
+                    help='Enable MPC for secure computation')
+parser.add_argument('--party_id', type=int, default=0, choices=[0, 1],
+                    help='Party ID for MPC (0 or 1)')
+parser.add_argument('--mpc_host', type=str, default='localhost',
+                    help='Host address for MPC communication')
+parser.add_argument('--mpc_port', type=int, default=5000,
+                    help='Base port for MPC communication')
+
+args = parser.parse_args()
+
+# CUDA 设置
+args.cuda = not args.no_cuda and torch.cuda.is_available()
+if torch.cuda.is_available():
+    if not args.cuda:
+        print("WARNING: You have a CUDA device, so you should probably run with --cuda")
+    else:
+        device_id = torch.cuda.current_device()
+        print('using device', device_id, torch.cuda.get_device_name(device_id))
+
+device = torch.device("cuda" if args.cuda else "cpu")
+print('DEVICE:', device)
+
+# MPC 设置
+if args.use_mpc:
+    print(f"\n{'='*60}")
+    print(f"MPC ENABLED - Running as Party {args.party_id}")
+    print(f"  Host: {args.mpc_host}")
+    print(f"  Port: {args.mpc_port}")
+    print(f"{'='*60}\n")
+else:
+    print(f"\n{'='*60}")
+    print("MPC DISABLED - Running in plain mode")
+    print(f"{'='*60}\n")
+
+client_num = args.client_num
+print("client_num:", client_num)
+
+path = "./dataset/%s" % args.dataSet + "/"
+
+# 获取数据
+print("Loading dataset...")
+user_features, user_labels, client_adj, label_num, train_features, train_labels, \
+    test_features, test_labels, at_f, at_l = deal_dataset(client_num, args.rate, args.r)
+print(f"Dataset loaded: {len(user_features[0])} training samples")
+
+# 初始化模型
+local_model = []
+local_model1 = []
+optimizer = []
+optimizer1 = []
+
+feature_dim = [len(user_features[j][0]) for j in range(client_num)]
+print(f"Feature dimensions: {feature_dim}")
+
+for i in range(client_num):
+    # 根据是否使用 MPC 选择模型
+    if args.use_mpc:
+        # 使用安全模型
+        local_model.append(SecureTr(feature_dim[i], args.dropout, 
+                                     party_id=args.party_id, use_mpc=True))
+        local_model1.append(SecureGMLP(r=args.client_num, nfeat=feature_dim,
+                                       nhid=args.hidden, nclass=label_num,
+                                       dropout=args.dropout, drate=args.cm,
+                                       party_id=args.party_id, use_mpc=True))
+    else:
+        # 使用原始模型
+        local_model.append(Tr(feature_dim[i], args.dropout))
+        local_model1.append(GMLP(r=args.client_num, nfeat=feature_dim,
+                                 nhid=args.hidden, nclass=label_num,
+                                 dropout=args.dropout, drate=args.cm))
+    
+    optimizer.append(optim.Adam(local_model[i].parameters(),
+                                lr=args.lr, weight_decay=args.weight_decay))
+    optimizer1.append(optim.Adam(local_model1[i].parameters(),
+                                 lr=args.lr, weight_decay=args.weight_decay1))
+
+if args.cuda:
+    for i in range(client_num):
+        local_model[i].cuda()
+        local_model1[i].cuda()
+
+print("Models initialized")
+
+
+def client_loss(alpha, beta, adj_batch, batch_output, x1):
+    """计算客户端损失"""
+    n = len(batch_output)
+    ba_ex = torch.unsqueeze(batch_output.cpu(), 1)
+    ba_ex1 = ba_ex.repeat(1, n, 1)
+    t = torch.norm(torch.sub(ba_ex1, batch_output.cpu()), p=2, dim=2)**2
+    pos_t = torch.mul(adj_batch, t.cuda())
+    pos_sum = torch.sum(pos_t, dim=1)
+    loss = alpha*(x1*x1)/n + beta*(pos_sum.mean())
+    
+    if not args.use_mpc:  # 只在非 MPC 模式打印详细信息
+        print((x1*x1)/n, pos_sum.mean())
+    
+    return loss, (x1*x1)/n, pos_sum.mean()
+
+
+def upload_local_model(global_model, models):
+    """上传本地模型"""
+    for model in models:
+        model.load_state_dict(global_model.state_dict())
+    return
+
+
+def accuracy(output, labels):
+    """计算准确率"""
+    preds = output.max(1)[1].type_as(labels)
+    correct = preds.eq(labels).double()
+    correct = correct.sum()
+    return correct / len(labels), sklearn.metrics.f1_score(labels, preds, average='weighted')
+
+
+def test(model):
+    """测试模型"""
+    model.eval()
+    with torch.no_grad():
+        if args.use_mpc and isinstance(model, SecureGMLP):
+            output = model(test_features, compute_norm=False)
+        else:
+            output = model(test_features)
+    acc_test, micro = accuracy(output, torch.tensor(test_labels))
+    print(f"Test Accuracy: {acc_test:.4f}, F1: {micro:.4f}")
+    return acc_test
+
+
+def get_batch1(client):
+    """获取批次数据"""
+    if client_adj[client].shape[0] > args.batch_size:
+        rand_indx = torch.tensor(
+            np.random.choice(np.arange(client_adj[client].shape[0]), 
+                           args.batch_size)
+        ).type(torch.long).cuda()
+        features_batch = torch.stack(user_features[client])[rand_indx]
+        adj_batch = client_adj[client][rand_indx, :][:, rand_indx]
+        return features_batch, adj_batch
+    else:
+        return torch.stack(user_features[client]), client_adj[client]
+
+
+if __name__ == '__main__':
+    # 设置 alpha 和 beta
+    if args.c == 1:
+        alpha = [1.0/client_num for i in range(client_num)]
+        beta = [1.0/client_num for i in range(client_num)]
+    elif args.c == 2:
+        alpha = [1.0 for i in range(client_num)]
+        beta = [1.0 for i in range(client_num)]
+    
+    print(f"\n{'='*60}")
+    print("PHASE 1: Training Local Models")
+    print(f"{'='*60}\n")
+    
+    # Phase 1: 训练本地模型
+    for m in range(client_num):
+        print(f"\nTraining local model for client {m}...")
+        
+        for r in tqdm(range(args.round1), desc=f"Client {m}"):
+            x1 = [0.0 for x in range(client_num)]
+            x2 = [0.0 for x in range(client_num)]
+            
+            f_b, a_b = get_batch1(m)
+            
+            local_model[m].train()
+            optimizer[m].zero_grad()
+            
+            # 前向传播
+            if args.use_mpc and isinstance(local_model[m], SecureTr):
+                batch_output, fx1 = local_model[m](f_b, compute_norm=True)
+            else:
+                batch_output, fx1 = local_model[m](f_b)
+            
+            # 计算损失
+            loss, x1[m], x2[m] = client_loss(alpha[m], beta[m], a_b, 
+                                            batch_output, fx1)
+            
+            # 反向传播
+            loss.backward(retain_graph=True)
+            optimizer[m].step()
+        
+        # 保存模型
+        local_model[m].eval()
+        PATH2 = f'./model_party{args.party_id}_client{m}.pth'
+        torch.save(local_model[m].state_dict(), PATH2)
+        print(f"Saved model to {PATH2}")
+        
+        # 加载到全局模型
+        for i in range(client_num):
+            if args.use_mpc and isinstance(local_model1[i], SecureGMLP):
+                local_model1[i].tran[m].load_state_dict(torch.load(PATH2))
+            else:
+                local_model1[i].tran[m].load_state_dict(torch.load(PATH2))
+    
+    print(f"\n{'='*60}")
+    print("PHASE 2: Freezing Local Models & Training Classifier")
+    print(f"{'='*60}\n")
+    
+    # Phase 2: 冻结 tran 层，训练分类器
+    for client_model in local_model1:
+        for name, param in client_model.named_parameters():
+            if "tran" in name:
+                param.requires_grad = False
+                if not args.use_mpc:
+                    print(f"Frozen: {name}")
+    
+    tt = 0.0
+    best_epoch = 0
+    
+    print("\nTraining classifier...")
+    for epoch4 in tqdm(range(args.round2), desc="Training"):
+        local_model1[0].train()
+        optimizer1[0].zero_grad()
+        
+        # 前向传播
+        if args.use_mpc and isinstance(local_model1[0], SecureGMLP):
+            batch_output = local_model1[0](at_f, compute_norm=False)
+        else:
+            batch_output = local_model1[0](at_f)
+        
+        # 计算损失
+        loss = F.nll_loss(batch_output, torch.tensor(at_l).cuda())
+        loss.backward()
+        optimizer1[0].step()
+        
+        # 测试
+        if (epoch4 + 1) % 10 == 0:  # 每10轮测试一次
+            tmp_test_acc = test(local_model1[0])
+            if tt < tmp_test_acc:
+                tt = tmp_test_acc
+                best_epoch = epoch4 + 1
+    
+    print(f"\n{'='*60}")
+    print("TRAINING COMPLETED")
+    print(f"{'='*60}")
+    print(f"Best Test Accuracy: {tt:.4f} (at epoch {best_epoch})")
+    print(f"{'='*60}\n")
+    
+    # 保存结果
+    log_file = open(r"log_mpc.txt", encoding="utf-8", mode="a+")
+    with log_file as file_to_be_write:
+        print(f"Party{args.party_id} MPC={args.use_mpc} c={args.c} "
+              f"cm={args.cm} round1={args.round1} acc={tt:.4f}", 
+              file=file_to_be_write)
+    
+    # 详细日志
+    log_file2 = open(r"results_mpc.txt", encoding="utf-8", mode="a+")
+    with log_file2 as f:
+        print(f"\n{'='*60}", file=f)
+        print(f"Experiment Results - Party {args.party_id}", file=f)
+        print(f"{'='*60}", file=f)
+        print(f"MPC Enabled: {args.use_mpc}", file=f)
+        print(f"Dataset: {args.dataSet}", file=f)
+        print(f"Clients: {client_num}", file=f)
+        print(f"Parameters: c={args.c}, cm={args.cm}, round1={args.round1}", file=f)
+        print(f"Best Accuracy: {tt:.4f} (epoch {best_epoch})", file=f)
+        print(f"{'='*60}\n", file=f)
+    
+    # 打印最终模型参数（可选）
+    if not args.use_mpc:  # 只在非 MPC 模式打印
+        print("\nFinal model parameters:")
+        for name, param in local_model1[0].named_parameters():
+            if param.requires_grad:
+                print(f"{name}: {param.data.shape}")
+    
+    print(f"\n{'='*60}")
+    print("All results saved!")
+    print(f"  - log_mpc.txt")
+    print(f"  - results_mpc.txt")
+    print(f"  - model_party{args.party_id}_client*.pth")
+    print(f"{'='*60}\n")

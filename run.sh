@@ -1,0 +1,23 @@
+#!/bin/bash
+python mul_main_o.py  --round1 5 --epochs2 200 --cm 1.0
+python mul_main_o.py  --round1 10 --epochs2 200 --cm 1.0
+python mul_main_o.py  --round1 20 --epochs2 200 --cm 1.0
+python mul_main_o.py  --round1 30 --epochs2 200 --cm 1.0
+python mul_main_o.py  --round1 50 --epochs2 200 --cm 1.0
+python mul_main_o.py  --round1 60 --epochs2 200 --cm 1.0
+python mul_main_o.py  --round1 70 --epochs2 200 --cm 1.0
+python mul_main_o.py  --round1 80 --epochs2 200 --cm 1.0
+python mul_main_o.py  --round1 90 --epochs2 200 --cm 1.0
+python mul_main_o.py  --round1 100 --epochs2 200 --cm 1.0
+python mul_main_o.py  --round1 110 --epochs2 200 --cm 1.0
+python mul_main_o.py  --round1 120 --epochs2 200 --cm 1.0
+python mul_main_o.py  --round1 130 --epochs2 200 --cm 1.0
+python mul_main_o.py  --round1 140 --epochs2 200 --cm 1.0
+python mul_main_o.py  --round1 150 --epochs2 200 --cm 1.0
+python mul_main_o.py  --round1 160 --epochs2 200 --cm 1.0
+python mul_main_o.py  --round1 170 --epochs2 200 --cm 1.0
+python mul_main_o.py  --round1 180 --epochs2 200 --cm 1.0
+python mul_main_o.py  --round1 190 --epochs2 200 --cm 1.0
+python mul_main_o.py  --round1 200 --epochs2 200 --cm 1.0
+python mul_main_o.py  --round1 300 --epochs2 200 --cm 1.0
+python mul_main_o.py  --round1 400 --epochs2 200 --cm 1.0

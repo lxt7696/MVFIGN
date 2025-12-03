@@ -1,0 +1,12 @@
+using device 0 NVIDIA GeForce RTX 3090
+DEVICE: cuda
+client_num: 2
+tensor(0.4160, device='cuda:0', dtype=torch.float16, grad_fn=<DivBackward0>) tensor(0.0219, device='cuda:0', grad_fn=<MeanBackward0>)
+Traceback (most recent call last):
+  File "/home/lxt/project/MVFIGN/v_main.py", line 157, in <module>
+    loss.backward(retain_graph=True)
+  File "/home/lxt/pytorch_env/lib/python3.9/site-packages/torch/_tensor.py", line 307, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "/home/lxt/pytorch_env/lib/python3.9/site-packages/torch/autograd/__init__.py", line 154, in backward
+    Variable._execution_engine.run_backward(
+KeyboardInterrupt

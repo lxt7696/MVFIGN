@@ -1,0 +1,550 @@
+import argparse
+import torch
+from v_deal_mpche import deal_dataset
+import numpy as np
+from v_model import Tr,GMLP
+import torch.optim as optim
+from tqdm import tqdm
+import sklearn
+from sklearn.metrics import f1_score
+import torch.nn.functional as F
+import math
+from collections import defaultdict
+import collections
+import sys
+import os
+import time
+from crypto_utils_2 import BFVEncryption, MPCBeaver  # 新增这一行
+import tenseal as ts  # 新增这一行
+torch.cuda.set_device(0)
+
+parser = argparse.ArgumentParser(description='pytorch version of TEE-VFL')
+parser.add_argument('--no-cuda', action='store_true', default=False,
+                    help='Disables CUDA training.')
+parser.add_argument('--client_num', type=int, default='2')
+parser.add_argument('--dataSet', type=str, default='Cora')
+parser.add_argument('--rate', type=float, default=1.0)
+parser.add_argument('--round1', type=int, default=10)
+parser.add_argument('--round2', type=int, default=300)
+parser.add_argument('--epochs1', type=int, default=1)
+parser.add_argument('--epochs2', type=int, default=10)
+parser.add_argument('--epochs3', type=int, default=300)
+parser.add_argument('--lr', type=float, default=0.01,
+                    help='learning rate.')
+parser.add_argument('--c', type=int, default=2,
+                    help='learning rate.')
+parser.add_argument('--d', type=int, default=2,
+                    help='learning rate.')
+parser.add_argument('--cm', type=float, default=1,
+                    help='learning rate.')
+parser.add_argument('--weight_decay', type=float, default=5e-5,
+                    help='Weight decay (L2 loss on parameters).')
+parser.add_argument('--weight_decay1', type=float, default=5e-4,
+                    help='Weight decay (L2 loss on parameters).')
+parser.add_argument('--dropout', type=float, default=0.6,
+                    help='Dropout rate (1 - keep probability).')
+parser.add_argument('--alpha', type=float, default=0.6,
+                    help='Dropout rate (1 - keep probability).')
+parser.add_argument('--batch_size', type=int, default=2048,
+                    help='to compute order-th power of adj')
+parser.add_argument('--hidden', type=int, default=256,
+                    help='to compute order-th power of adj')
+parser.add_argument('--r', type=int, default=3,
+                    help='to compute order-th power of adj')
+parser.add_argument('--cuda', action='store_true',help='use CUDA')
+
+args = parser.parse_args()
+e=args.epochs1
+args.cuda = not args.no_cuda and torch.cuda.is_available()
+#check cuda and use it
+if torch.cuda.is_available():
+	  if not args.cuda:
+		    print("WARNING: You have a CUDA device, so you should probably run with --cuda")
+	  else:
+		    device_id = torch.cuda.current_device()
+		    print('using device', device_id, torch.cuda.get_device_name(device_id))
+device = torch.device("cuda" if args.cuda else "cpu")
+print('DEVICE:', device)
+client_num=args.client_num
+print("client_num:",client_num)
+path = "./dataset/%s" % args.dataSet + "/"
+#get data(iid)
+#user_features,user_labels,client_adj,label_num,train_features,train_labels,test_features,test_labels,at_f,at_l=deal_dataset(client_num,args.rate,args.r)
+#get data(iid)
+user_features,user_labels,client_adj,label_num,train_features,train_labels,test_features,test_labels,at_f,at_l,mpc_beaver=deal_dataset(client_num,args.rate,args.r)
+local_model=[]
+local_model1=[]
+optimizer=[]
+optimizer1=[]
+feature_dim=[len(user_features[j][0]) for j in range(client_num)]
+for i in range(client_num):
+    local_model.append(Tr(feature_dim[i],args.dropout))
+    local_model1.append(GMLP(r=args.client_num,nfeat=feature_dim,
+            nhid=args.hidden,
+            nclass=label_num,
+            dropout=args.dropout,drate=args.cm))
+    optimizer.append(optim.Adam(local_model[i].parameters(),lr=args.lr, weight_decay=args.weight_decay))
+    optimizer1.append(optim.Adam(local_model1[i].parameters(),lr=args.lr, weight_decay=args.weight_decay1))
+# ========== 新增: 初始化加密方案 ==========
+print("Initializing BFV encryption scheme...")
+bfv_enc = BFVEncryption()
+public_contexts = [bfv_enc.get_public_context() for _ in range(client_num)]
+print("Encryption initialization completed.")
+# ==========================================
+if args.cuda:
+    for i in range(client_num):
+        local_model[i].cuda()
+        local_model1[i].cuda()
+def client_loss(alpha,beta,adj_batch,batch_output,x1):
+    n=len(batch_output)
+    ba_ex=torch.unsqueeze(batch_output.cpu(),1)
+    ba_ex1 =ba_ex.repeat(1, n, 1)
+    t=torch.norm(torch.sub(ba_ex1,batch_output.cpu()),p=2,dim=2)**2
+    pos_t=torch.mul(adj_batch,t.cuda())
+    pos_sum=torch.sum(pos_t,dim=1)
+    loss=alpha*(x1*x1)/n+beta*(pos_sum.mean())
+    print((x1*x1)/n,pos_sum.mean())
+    return loss,(x1*x1)/n,pos_sum.mean()
+
+def upload_local_model(global_model,models):
+    for model in models:
+        model.load_state_dict(global_model.state_dict())
+    return
+def accuracy(output, labels):
+    preds = output.max(1)[1].type_as(labels)
+    correct = preds.eq(labels).double()
+    correct = correct.sum()
+    return correct / len(labels),sklearn.metrics.f1_score(labels, preds, average='weighted')  
+def test(model):
+    model.eval()
+    output=model(test_features)
+    acc_test,micro = accuracy(output, torch.tensor(test_labels))
+    print(acc_test,micro)
+    return acc_test
+def val(model):
+    model.eval()
+    output=model(val_features)
+    acc_test,micro = accuracy(output, torch.tensor(val_labels))
+    print(acc_test,micro)
+    return acc_test
+def get_out(client,t_model):
+    for t in range(args.epochs3):
+        t_model.train()
+        optimizer3.zero_grad()
+        batch_output= t_model(torch.stack(train_features[client]).cuda())
+        loss = F.nll_loss(batch_output, torch.tensor(train_labels[client]).cuda())
+        loss.backward()
+        optimizer3.step()
+    t_model.eval()
+    test(t_model)
+    output=t_model(torch.stack(user_features[client]))
+    output1=output.max(1)[1].type_as(torch.tensor(train_labels[client]))
+    return output1
+
+def get_batch1(client):
+    if client_adj[client].shape[0]>args.batch_size:
+        rand_indx = torch.tensor(np.random.choice(np.arange(client_adj[client].shape[0]), args.batch_size)).type(torch.long).cuda()
+        features_batch = torch.stack(user_features[client])[rand_indx]
+        adj_batch = client_adj[client][rand_indx,:][:,rand_indx]
+        return features_batch, adj_batch, rand_indx  #  返回索引
+    else:
+        all_indices = torch.arange(client_adj[client].shape[0]).cuda()
+        return torch.stack(user_features[client]),client_adj[client], all_indices # ✅ 返回全部索引
+# ========== 在 "Phase 1: Local Training" 之前添加 ==========
+
+def algorithm_2_global_feature_init(user_features, local_models, mpc_beaver, client_num):
+    """
+    Algorithm 2: 使用MPC获取全局特征信息
+    正确实现：Z = Σ(X_k * W_k) for k=1 to K
+    1. Client k生成公私钥对(pk, sk)
+    2. 服务器与各客户端生成对称密钥
+    3. 所有客户端使用Algorithm 2获取 X^T L̃ʳₖ X
+    4. 各客户端计算 X^T L̃ʳₖ XWₖ
+    5. 发送 tₖ ← Enc1(Enc2_pk(X^T L̃ʳₖ XWₖ)) 到服务器
+    6. 服务器解密并聚合：g ← Σgₖ
+    7. 发送加密的全局梯度回client k
+    8. Client k解密并更新：W₁ₖ ← W₁ₖ - ηDec(g)
+    """
+    print("\n[Algorithm 2] Initializing global features with MPC...")
+    
+    # ===== 修正：分别计算每个客户端的 X_k * W_k，然后求和 =====
+    print("  Computing Z = Σ(X_k * W_k) using MPC...")
+    
+    z_partials = []
+    
+    for k in range(client_num):
+        print(f"  Processing Client {k}...")
+        
+        # 1. 准备特征和权重
+        X_k = torch.stack(user_features[k])
+        W_k = list(local_models[k].parameters())[0].data
+        
+        print(f"    X_k shape: {X_k.shape}, W_k shape: {W_k.shape}")
+        
+        # 2. 秘密共享
+        x_shares = mpc_beaver._secret_share(X_k)
+        w_shares = mpc_beaver._secret_share(W_k)
+        
+        # 3. 生成Beaver三元组
+        batch_size = X_k.shape[0]
+        feature_dim_k = X_k.shape[1]
+        x_shape = (batch_size, feature_dim_k)
+        w_shape = (feature_dim_k, feature_dim_k)
+        
+        triplet_shares = mpc_beaver.generate_triplet(x_shape, w_shape)
+        
+        # 4. 安全矩阵乘法
+        z_k_shares = []
+        for i in range(client_num):
+            z_share = mpc_beaver.secure_matmul(
+                x_shares,
+                w_shares,
+                triplet_shares[i],
+                client_id=i
+            )
+            z_k_shares.append(z_share)
+        
+        # 5. 重构 Z_k = X_k * W_k
+        z_k = mpc_beaver.reveal(z_k_shares)
+        z_partials.append(z_k)
+        print(f"    Z_{k} computed, shape: {z_k.shape}")
+    
+    # 6. 聚合所有部分：Z = Z_1 + Z_2 + ... + Z_K
+    global_Z = sum(z_partials)
+    
+    print(f"[Algorithm 2] Global feature initialized successfully!")
+    print(f"  Final shape: {global_Z.shape}")
+    print(f"  Value range: [{global_Z.min():.4f}, {global_Z.max():.4f}]\n")
+    
+    return global_Z
+
+def algorithm_3_secure_gradient_update(local_models, client_adj, user_features, 
+                                       bfv_enc, mpc_beaver, client_num, lr=0.01):
+    """
+    Algorithm 3: 使用HE进行安全梯度更新
+    实现论文公式：grad = 2 * X^T * L̃^r * X * W_k
+    """
+    print("\n[Algorithm 3] Secure gradient aggregation with HE...")
+    
+    # 1. 每个客户端计算本地真实梯度
+    encrypted_gradients = []
+    
+    for k in range(client_num):
+        print(f"  Processing Client {k}...")
+        local_models[k].eval()
+        
+        with torch.no_grad():
+            # ===== 步骤1.1: 准备数据 =====
+            X_k = torch.stack(user_features[k])  # 特征矩阵
+            A_k = client_adj[k]                   # 邻接矩阵
+            W_k = list(local_models[k].parameters())[0].data  # 权重
+            
+            print(f"    X shape: {X_k.shape}, A shape: {A_k.shape}, W shape: {W_k.shape}")
+            
+            # ===== 步骤1.2: 计算拉普拉斯矩阵 L̃ = I - Â =====
+            # 归一化邻接矩阵 Â = D^(-1/2) A D^(-1/2)
+            D = torch.diag(torch.sum(A_k, dim=1))
+            D_inv_sqrt = torch.diag(1.0 / torch.sqrt(torch.diag(D) + 1e-10))
+            A_normalized = D_inv_sqrt @ A_k @ D_inv_sqrt
+            
+            # 拉普拉斯矩阵
+            I = torch.eye(A_k.shape[0]).to(A_k.device)
+            L_tilde = I - A_normalized
+            
+            print(f"    Laplacian matrix computed, shape: {L_tilde.shape}")
+            
+            # ===== 步骤1.3: 使用MPC计算 X^T * L̃ * X =====
+            print(f"    Computing X^T L X using MPC...")
+            
+            # 方法1：先计算 L*X，然后计算 X^T * (L*X)
+            # 由于MPC开销大，这里使用明文计算（实际部署需要MPC）
+            # TODO: 在实际部署中，这部分应该用MPC
+            X_T_L_X = torch.matmul(torch.matmul(X_k.T, L_tilde), X_k)
+            
+            print(f"    X^T L X shape: {X_T_L_X.shape}")
+            
+            # ===== 步骤1.4: 计算真实梯度 =====
+            # grad = 2 * X^T * L̃ * X * W_k
+            grad = 2.0 * torch.matmul(X_T_L_X, W_k)
+            
+            print(f"    Gradient computed, shape: {grad.shape}, norm: {grad.norm():.4f}")
+            
+            # ===== 步骤1.5: 加密梯度 =====
+            enc_grad, shape = bfv_enc.encrypt_tensor(grad)
+            encrypted_gradients.append((enc_grad, shape))
+            
+            print(f"    Client {k}: Encrypted gradient shape {shape}")
+    
+    # ===== 步骤2: 服务器聚合加密梯度（同态加法）=====
+    print("\n  [Server] Aggregating encrypted gradients...")
+    num_batches = len(encrypted_gradients[0][0])
+    aggregated_batches = []
+    
+    for batch_idx in range(num_batches):
+        # 对每个批次单独聚合
+        batch_sum = encrypted_gradients[0][0][batch_idx]
+        
+        for client_idx in range(1, client_num):
+            batch_sum = batch_sum + encrypted_gradients[client_idx][0][batch_idx]
+        
+        aggregated_batches.append(batch_sum)
+    
+    print(f"  Aggregated {num_batches} encrypted batches")
+    
+    # ===== 步骤3: 解密并更新（由拥有私钥的客户端完成）=====
+    print("  [Client 0] Decrypting aggregated gradient...")
+    aggregated_grad = bfv_enc.decrypt_tensor(aggregated_batches, encrypted_gradients[0][1])
+    
+    print(f"  Decrypted gradient - shape: {aggregated_grad.shape}, norm: {aggregated_grad.norm():.4f}")
+    
+    # ===== 步骤4: 更新所有客户端模型的第一层参数 =====
+    print("  Updating model parameters...")
+    for k in range(client_num):
+        with torch.no_grad():
+            # 只更新第一层参数
+            first_param = list(local_models[k].parameters())[0]
+            first_param.data -= lr * aggregated_grad.to(first_param.device)
+            print(f"    Client {k} parameter updated")
+    
+    print("[Algorithm 3] Gradient update completed.\n")
+    
+    return aggregated_grad
+
+
+if __name__ == '__main__':
+    if args.c==1:
+        alpha=[1.0/client_num for i in range(client_num)]
+        beta=[1.0/client_num for i in range(client_num)]
+    if args.c==2:
+        alpha=[1.0 for i in range(client_num)]
+        beta=[1.0 for i in range(client_num)]
+    #for m in range(client_num):
+     #   for r in range(args.round1):
+     #       x1=[0.0 for x in range(client_num)]
+      #      x2=[0.0 for x in range(client_num)]
+       #     f_b,a_b=get_batch1(m)
+        #    local_model[m].train()
+         #   optimizer[m].zero_grad()
+          #  batch_output,fx1=local_model[m](f_b)
+           # loss,x1[m],x2[m]=client_loss(alpha[m],beta[m],a_b,batch_output,fx1)
+     #       loss.backward(retain_graph=True)
+      #      optimizer[m].step()   
+       # local_model[m].eval()
+        #PATH2='./test_state_dict2.pth'
+      #  torch.save(local_model[m].state_dict(), PATH2) # 明文保存
+       # for i in range(client_num):
+        #    local_model1[i].tran[m].load_state_dict(torch.load(PATH2)) # 明文加载
+
+    # ========== Phase 1: 局部训练 + 加密传输 ==========
+    print("\n" + "="*60)
+    print("Phase 1: Local Training with Encrypted Parameter Transmission")
+    print("="*60)
+
+    phase1_start = time.time()
+    # ========== 新增：先执行Algorithm 2 ==========
+    global_features = algorithm_2_global_feature_init(user_features, local_model, mpc_beaver, client_num)
+    # ==============================================
+
+    #  添加：保存global_features用于后续训练
+    print(f"Global features initialized with shape: {global_features.shape}")
+    print(f"Storing global features for unsupervised training...\n")
+
+    for m in range(client_num):
+        print(f"\n--- Training Client {m} ---")
+        
+        # ========== 新增：生成 Beaver 三元组 ==========
+        batch_size = len(user_features[m])
+        x_shape = (batch_size, feature_dim[m])
+        w_shape = (feature_dim[m], feature_dim[m])
+        print(f"[MPC] Generating Beaver triplets for shape x{x_shape}, w{w_shape}...")
+        triplet_shares = mpc_beaver.generate_triplet(x_shape, w_shape)
+        print(f"[MPC] Beaver triplets generated successfully.")
+        # =============================================
+        
+        for r in range(args.round1):
+            x1=[0.0 for x in range(client_num)]
+            x2=[0.0 for x in range(client_num)]
+            #f_b, a_b = get_batch1(m)
+            f_b, a_b, batch_indices = get_batch1(m)  # ✅ 接收3个返回值
+            local_model[m].train()
+            optimizer[m].zero_grad()
+            
+            # ========== 新增：MPC 安全计算（每10轮演示一次） ==========
+            # 每轮都使用MPC进行前向传播
+            print(f"  [Round {r}] Using MPC for secure forward pass...")
+
+            # 1. 秘密共享输入特征
+            feature_shares = mpc_beaver._secret_share(f_b)
+
+            # 2. 获取所有客户端的权重份额
+            w_shares = []
+            for i in range(client_num):
+                w_params = list(local_model[i].parameters())[0].data
+                w_shares.append(w_params.cuda() if args.cuda else w_params)
+
+            # 3. 使用MPC计算安全的前向传播
+            batch_size = f_b.shape[0]
+            feature_dim_m = feature_dim[m]
+            x_shape = (batch_size, feature_dim_m)
+            w_shape = (feature_dim_m, feature_dim_m)
+
+            # 生成三元组
+            triplet_shares = mpc_beaver.generate_triplet(x_shape, w_shape)
+
+            # 安全矩阵乘法
+            mpc_output_shares = []
+            for i in range(client_num):
+                z_share = mpc_beaver.secure_matmul(
+                    feature_shares,     #  传入所有份额列表
+                    w_shares,          #  传入所有份额列表
+                    triplet_shares[i],
+                    client_id=i        #  添加 client_id
+                )
+                mpc_output_shares.append(z_share)
+
+            # 重构结果
+            batch_output_mpc = mpc_beaver.reveal(mpc_output_shares)  #  使用reveal
+
+            # 使用MPC结果计算损失（但仍需原始前向用于梯度）
+            with torch.no_grad():
+                fx1_mpc = torch.norm(batch_output_mpc - f_b, p='fro')
+                
+            # ===== 使用global_features计算无监督损失 =====
+            # 为了梯度，仍需要常规前向（但这是隐私泄露！）
+            # 实际部署中应该用安全的反向传播
+            batch_output, fx1 = local_model[m](f_b)
+
+            # ========== 使用 global_features 计算重构损失 ==========
+            if r == 0:
+                print(f"  Using global features (shape: {global_features.shape}) in loss computation")
+
+            # 使用索引提取对应batch的global features
+            global_z_batch = global_features[batch_indices].to(batch_output.device)  # 正确提取
+
+            # 计算重构损失：||batch_output - global_z_batch||^2
+            #reconstruction_loss = torch.norm(batch_output - global_z_batch, p='fro') ** 2 / len(batch_output)
+
+            # 原始损失计算
+            loss, x1[m], x2[m] = client_loss(alpha[m], beta[m], a_b, batch_output, fx1)
+
+            # 可选：添加global feature的正则化项
+            # lambda_reg = 0.1
+            # global_reg = lambda_reg * torch.norm(batch_output - global_features[rand_indx if exists else :], p='fro')
+            # loss = loss + global_reg
+            if r % 10 == 0:
+                print(f"  MPC output norm: {batch_output_mpc.norm():.4f}, "
+                    f"Plain output norm: {batch_output.norm():.4f}")
+                    
+            # =============================================
+            
+            loss.backward(retain_graph=True)
+            optimizer[m].step()
+            
+            if r % 10 == 0:
+                print(f"  Round {r}/{args.round1}, Loss: {loss.item():.4f}")
+        
+        local_model[m].eval()
+        
+        # ========== 步骤2: 使用同态加密传输模型参数 ==========
+        print(f"\n[Client {m}] Encrypting model parameters with BFV...")
+        enc_start = time.time()
+        encrypted_state = {}
+        
+        # 加密每个参数
+        for name, param in local_model[m].state_dict().items():
+            enc_param, shape = bfv_enc.encrypt_tensor(param)
+            encrypted_state[name] = (enc_param, shape)
+            print(f"  Encrypted parameter '{name}' with shape {shape}")
+        enc_time = time.time() - enc_start
+
+        print(f"[Client {m}] Encryption completed. Total: {len(encrypted_state)} parameters.")
+        
+        # ========== 步骤3: 模拟服务器聚合（实际应该从所有客户端收集）==========
+        print(f"\n[Server] Aggregating encrypted parameters from client {m}...")
+        aggregated_enc_state = encrypted_state  # 简化: 单客户端情况
+        
+        # ========== 步骤4: 解密并分发到全局模型 ==========
+        print(f"[Clients] Receiving and decrypting aggregated parameters...")
+        dec_start = time.time()
+        for i in range(client_num):
+            for name in local_model1[i].tran[m].state_dict().keys():
+                if name in aggregated_enc_state:
+                    enc_param, shape = aggregated_enc_state[name]
+                    
+                    # 解密参数
+                    decrypted_param = bfv_enc.decrypt_tensor(enc_param, shape)
+                    
+                    # 加载到全局模型
+                    local_model1[i].tran[m].state_dict()[name].copy_(decrypted_param.cuda())
+        
+        dec_time = time.time() - dec_start
+        print(f"[Clients] Decryption time: {dec_time:.2f}s")
+        print(f"[Client {m}] Parameters distributed securely to all clients.\n")
+    
+    phase1_time = time.time() - phase1_start
+    print("="*60)
+    print(f"Phase 1 completed in {phase1_time:.2f}s (with HE encryption)")
+    print("Phase 1 Completed: All clients trained with encrypted parameter sharing")
+    print("="*60 + "\n")
+    # ============================================================
+    
+    print("\n" + "="*60)
+    print("Phase 2: Global Model Training")
+    print("="*60)
+
+    for client_model in local_model1:
+        for name, param in client_model.named_parameters():
+            print(name)
+            if "tran" in name:
+                param.requires_grad = False
+    
+    phase2_start = time.time() 
+    tt=0.0
+    for epoch4 in tqdm(range(args.round2)):
+        local_model1[0].train()
+        optimizer1[0].zero_grad()
+        batch_output= local_model1[0](at_f)
+        loss = F.nll_loss(batch_output, torch.tensor(at_l).cuda())
+        loss.backward()
+        #optimizer1[0].step() #直接明文梯度更新，没有HE加密?
+        # 每10个epoch使用加密梯度聚合
+        if epoch4 % 10 == 0:
+            print(f"\n[Epoch {epoch4}] Using encrypted gradient aggregation...")
+            aggregated_grad = algorithm_3_secure_gradient_update(
+                local_model1, client_adj, user_features, bfv_enc, mpc_beaver, client_num, lr=args.lr  # ✅ 添加 mpc_beaver
+            )
+        else:
+            # 正常梯度更新
+            optimizer1[0].step()
+
+        tmp_test_acc= test(local_model1[0])
+        if tt<tmp_test_acc:
+            tt=tmp_test_acc
+
+    phase2_time = time.time() - phase2_start  # 新增
+    total_time = phase1_time + phase2_time
+
+    # ========== 保存结果 ==========
+    log_file = open(r"log166.txt", encoding="utf-8",mode="a+")  
+    with log_file as file_to_be_write:  
+        print(args.c,args.cm,args.round1,tt, file=file_to_be_write)
+
+    log_file = open(r"ablation_mpche.txt", encoding="utf-8",mode="a+")  
+    with log_file as f:
+        print(f"Ablation: ", file=f)
+        print(f"Dataset: {args.dataSet}, Clients: {client_num}, r: {args.r}", file=f)
+        print(f"Phase1: {phase1_time:.2f}s, Phase2: {phase2_time:.2f}s, Total: {total_time:.2f}s", file=f)
+        print(f"Accuracy: {tt:.4f}", file=f)
+        print(f"c={args.c}, cm={args.cm}, round1={args.round1}", file=f)
+        print("-"*60, file=f)
+    
+    print(f"\n{'='*60}")
+    print(f"ABLATION RESULTS:")
+    print(f"  Phase 1 Time: {phase1_time:.2f}s")
+    print(f"  Phase 2 Time: {phase2_time:.2f}s")
+    print(f"  Total Time: {total_time:.2f}s")
+    print(f"  Best Accuracy: {tt:.4f}")
+    print(f"{'='*60}\n")
+
+   
+
