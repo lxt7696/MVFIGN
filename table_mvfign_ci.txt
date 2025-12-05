@@ -1,8 +1,0 @@
-using device 0 NVIDIA GeForce RTX 3090
-DEVICE: cuda
-client_num: 1
-tensor(0.4280, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0223, device='cuda:0', grad_fn=<MeanBackward0>)
-tensor(0.3541, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0212, device='cuda:0', grad_fn=<MeanBackward0>)
-tensor(0.2977, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0219, device='cuda:0', grad_fn=<MeanBackward0>)
-tensor(0.2471, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0213, device='cuda:0', grad_fn=<MeanBackward0>)
-tensor(0.2081, device='cuda:0', grad_fn=<DivBackward0>) tensor(0.0206, device='cuda:0', grad_fn=<MeanBackward0>)
